@@ -1,9 +1,12 @@
 package com.bocweb.otis.util
 
+import android.content.Context
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.bocweb.otis.util.ui.MaxViewPager
 import com.to.aboomy.banner.Banner

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.core.animation.doOnEnd
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
+import com.bocweb.otis.ui.aeeb.good.AeebGoodActivity
 import com.bocweb.otis.ui.aeeb.health.HealthActivity
 import com.bocweb.otis.ui.aeeb.spare.AeebSpareActivity
 import com.bocweb.otis.util.setClickNoRepeat
@@ -22,6 +23,11 @@ class AeebMainActivity : BaseActivity() {
 
         tv_action_spare.setClickNoRepeat {
             val intent = Intent(this, AeebSpareActivity::class.java)
+            startActivity(intent)
+        }
+
+        tv_action_good.setClickNoRepeat {
+            val intent = Intent(this,AeebGoodActivity::class.java)
             startActivity(intent)
         }
     }

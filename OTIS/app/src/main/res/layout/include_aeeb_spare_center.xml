@@ -98,9 +98,10 @@
         android:textSize="12sp" />
 
     <com.bocweb.otis.util.ui.SpareLevelView
-        android:id="@+id/spareLevelView"
+        android:id="@+id/levelView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:elevation="1dp"
         android:layout_below="@id/tv7"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"

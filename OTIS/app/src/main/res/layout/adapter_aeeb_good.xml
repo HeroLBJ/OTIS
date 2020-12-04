@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/iv_img"
+                android:background="@color/black_141A29" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/shape_health_banner_line" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_img"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="全系顶配"
+                android:textColor="#C79D5B"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="稀土永磁同步无齿轮条形主机\n能源再生变频控制柜\n永磁同步变频门机"
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_action_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_img"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="观看\n视频"
+                android:textColor="#666"
+                android:textSize="9sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_num"
+        android:layout_width="36.5dp"
+        android:layout_height="36.5dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/res_f1"
+        android:elevation="@dimen/dp_10" />
+
+</RelativeLayout>

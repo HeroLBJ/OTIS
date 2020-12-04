@@ -13,7 +13,6 @@ class AeebSpareActivity : BaseActivity() {
     private var childIndex = 0
 
     override fun initView() {
-        spareLevelView.startAnim()
         tv_num1.showNumberWithAnimation(1395f)
         tv_num2.showNumberWithAnimation(13900f)
         tv_num3.showNumberWithAnimation(40f)
@@ -21,11 +20,13 @@ class AeebSpareActivity : BaseActivity() {
         for (tabRow in table_layout.children) {
             for (tree in (tabRow as TableRow).children) {
                 childIndex++
-                val anim = ObjectAnimator.ofFloat(tree, "alpha", 0.2f, 1f)
+                val anim = ObjectAnimator.ofFloat(tree, "alpha", 0.1f, 1f)
                 anim.duration = 500
                 anim.startDelay = childIndex * 20.toLong()
                 anim.start()
             }
         }
+
+        levelView.startAnim()
     }
 }
