@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="305dp"
+    android:layout_height="464dp"
+    android:layout_marginTop="18dp"
+    android:background="@drawable/shape_health_run_bg">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_health_banner_line" />
+
+
+    <ImageView
+        android:id="@+id/iv_label_1"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_1"
+        android:text="1" />
+
+    <ImageView
+        android:id="@+id/iv_label_2"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_2"
+        android:text="2" />
+
+    <ImageView
+        android:id="@+id/iv_label_3"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_3"
+        android:text="3" />
+
+    <ImageView
+        android:id="@+id/iv_label_4"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_4"
+        android:text="4" />
+
+    <ImageView
+        android:id="@+id/iv_label_5"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_5"
+        android:text="5" />
+
+    <ImageView
+        android:id="@+id/iv_label_6"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_6"
+        android:text="6" />
+
+    <ImageView
+        android:id="@+id/iv_label_7"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_7"
+        android:text="7" />
+
+    <ImageView
+        android:id="@+id/iv_label_8"
+        style="@style/health_3_label_eight"
+        android:background="@drawable/health_label_8"
+        android:text="8" />
+
+    <RelativeLayout
+        android:id="@+id/rl_switch1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="35dp"
+        android:background="@drawable/health_3_good_anniu">
+
+        <FrameLayout
+            android:id="@+id/fl_good"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_good_title"
+        style="@style/title_bold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_switch1"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="抗菌材料表面"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_switch2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/health_3_bad_anniu">
+
+        <FrameLayout
+            android:id="@+id/fl_bad"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bad_title"
+        style="@style/title_bold"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_switch2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="非抗菌材料表面"
+        android:textSize="15sp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="235dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_bad_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:max="240" />
+
+    <TextView
+        android:id="@+id/tv_time1"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="0小时"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_time2"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:text="24小时"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_repeat"
+        android:layout_width="30dp"
+        android:visibility="gone"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/black_141A29" />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7D8D1"
+    tools:context=".ui.aeeb.AeebMainActivity">
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_six_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="178.5dp"
+            android:background="@drawable/home_six_gray">
+
+            <ImageView
+                android:id="@+id/iv_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleY="1.01"
+                android:scaleX="1.01"
+                android:background="@drawable/home_six_center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/home_center_text" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/main_six_title"
+            android:layout_alignTop="@id/rl_six_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp"
+            android:text="多"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+        <TextView
+            style="@style/main_six_title"
+            android:id="@+id/tv_action_health"
+            android:layout_alignTop="@id/rl_six_out"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/rl_six_out"
+            android:text="健康"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+        <TextView
+            style="@style/main_six_title"
+            android:layout_alignTop="@id/rl_six_out"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@id/rl_six_out"
+            android:text="美"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+        <TextView
+            android:id="@+id/tv_action_spare"
+            style="@style/main_six_title"
+            android:layout_below="@id/rl_six_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="省"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+        <TextView
+            style="@style/main_six_title"
+            android:layout_alignTop="@id/rl_six_out"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="200dp"
+            android:layout_toEndOf="@id/rl_six_out"
+            android:text="好"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+        <TextView
+            style="@style/main_six_title"
+            android:layout_alignTop="@id/rl_six_out"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/rl_six_out"
+            android:text="快"
+            app:drawableTopCompat="@drawable/send_dynamic_location" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:text="点击查看秘籍"
+        android:textColor="#141A29"
+        style="@style/title_bold"
+        android:gravity="center"
+        android:textSize="13sp"
+        app:drawableBottomCompat="@drawable/home_text_down_line" />
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/res_main_alpha"
+        android:transitionName="action" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:alpha="0"
+        android:gravity="center"
+        android:text="A  E  E  B"
+        android:textColor="@color/splash_letter_color"
+        android:textSize="15sp" />
+
+</FrameLayout>

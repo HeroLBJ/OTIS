@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OnGuard健康轿厢包"
+            android:textColor="@color/black_141A29"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp">
+
+            <ImageView
+                android:layout_width="51.5dp"
+                android:layout_height="51.5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/res_health_no_from" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="17dp"
+                android:background="#C6C7C2" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/health_3_logo" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14.5dp"
+                android:text="轿厢按钮杀菌\n给电梯“戴手套”"
+                android:textColor="#141A29"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_health3_anim"/>
+
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="术语和定义 (QB/T 2591-2003)"
+            android:textColor="#141A29"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抑菌"
+                    style="@style/title_bold"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="         负离子发生器通过脉冲震荡电路产生负离子，实现除尘降尘"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="杀菌"
+                    style="@style/title_bold"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="         杀死微生物营养体和繁殖体的作用叫做杀菌"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抗菌"
+                    style="@style/title_bold"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="         抑菌和杀菌作用总合称为抗菌"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抗菌塑料"
+                    style="@style/title_bold"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="               具有抗菌作用的塑料称为抗菌塑料"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

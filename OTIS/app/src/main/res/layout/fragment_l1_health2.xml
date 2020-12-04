@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_health_logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp">
+
+            <ImageView
+                android:layout_width="51.5dp"
+                android:layout_height="51.5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/res_health_no_from" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="17dp"
+                android:background="#C6C7C2" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/health_2_logo" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14.5dp"
+                android:text="轿厢紫外线杀菌\n让电梯“勤洗手”"
+                android:textColor="#141A29"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="305dp"
+            android:layout_height="464dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape_health_run_bg"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_health_banner_line" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="紫外线是世界公认的\n有效杀菌手段 "
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="91dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/health_2_draw_bg" />
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="91dp"
+                android:layout_marginBottom="41dp"
+                android:background="@drawable/health_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:text="照射剂量 = 照射时间 (S)     紫外线照射幅度 (μW/cm2)"
+                android:textColor="@color/black_141A29"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="卓越性能"
+            android:textColor="#141A29"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="专业"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="       —— 采用专业杀菌紫外线灯装置"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动控制"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="             —— 低能耗，轿内无人时自动开始杀菌"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二次防护"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="             —— 更安全，集成人体红外线检测装置"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="防紫外线泄露设计"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="                          —— 多层保护，轿门式的迷宫设计"
+                    android:textColor="#444444"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="15dp"
+            android:background="#C6C7C2" />
+
+    </LinearLayout>
+
+</LinearLayout>

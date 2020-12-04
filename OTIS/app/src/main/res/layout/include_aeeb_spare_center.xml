@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="51.5dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每年节能"
+        android:textSize="12sp" />
+
+    <com.bocweb.otis.util.ui.RollingNumView
+        android:id="@+id/tv_num1"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="3dp"
+        android:text="1395"
+        android:textSize="20sp" />
+
+    <TextView
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@id/tv_num1"
+        android:text="万度"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="148.5dp"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_num1"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0.5dp"
+        android:layout_height="125.5dp"
+        android:layout_marginStart="148dp"
+        android:background="@color/line_color" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/line2"
+        android:layout_marginEnd="24dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp"
+        android:text="减少二氧化碳排放"
+        android:textSize="12sp" />
+
+    <com.bocweb.otis.util.ui.RollingNumView
+        android:id="@+id/tv_num2"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv4"
+        android:layout_marginTop="3dp"
+        android:text="13900"
+        android:textSize="20sp" />
+
+    <TextView
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv4"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@id/tv_num2"
+        android:text="吨"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv7"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@id/line2"
+        android:text="TÜV认证A级能效"
+        android:textSize="12sp" />
+
+    <com.bocweb.otis.util.ui.SpareLevelView
+        android:id="@+id/spareLevelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv7"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/line2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二氧化碳吸收量相当于"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.bocweb.otis.util.ui.RollingNumView
+                android:id="@+id/tv_num3"
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="40"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="3dp"
+                android:text="公顷森林/年"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+
+                <ImageView style="@style/spare_tree" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

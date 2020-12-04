@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_health_logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp">
+
+            <RelativeLayout
+                android:layout_width="51.5dp"
+                android:layout_height="51.5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/res_health_feimo" />
+
+                <ImageView
+                    android:layout_width="51.5dp"
+                    android:layout_height="51.5dp"
+                    android:background="@drawable/res_health_feimo_no" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="17dp"
+                android:background="#C6C7C2" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/health_1_logo" />
+
+            <TextView
+                android:layout_marginTop="-2dp"
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14.5dp"
+                android:text="轿厢杀菌净化系统\n让电梯“戴口罩”"
+                android:textColor="#141A29"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="305dp"
+            android:layout_height="464dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape_health_run_bg">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_health_banner_line" />
+
+            <View
+                android:background="@drawable/health_1_dianti"
+                android:layout_width="222dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_height="412.5dp"/>
+
+            <FrameLayout
+                android:id="@+id/fl_old"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_bottom"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="280dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_new"
+                android:layout_width="140dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="140dp" />
+
+            <ImageView
+                android:id="@+id/iv_wind1"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="120dp"
+                android:background="@drawable/health_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/iv_wind2"
+                android:layout_marginTop="250dp"
+                android:layout_marginStart="140dp"
+                android:background="@drawable/health_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="原理与性能"
+            android:textColor="#141A29"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="风机内置负离子发生器和紫外线灯。"
+            android:textColor="#444444"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负离子发生器通过脉冲震荡电路产生负离子，实现除尘降尘"
+                android:textColor="#444444"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="·    "
+                android:textColor="@color/black_141A29" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="紫外线灯照射杀菌，并产生微量臭氧，亦可实现杀菌。"
+                android:textColor="#444444"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="15dp"
+            android:background="#C6C7C2" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:text="PM2.5颗粒净化效率"
+                android:textColor="#141A29"
+                android:textSize="12sp" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:text="杀菌消毒率"
+                android:textColor="#141A29"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:text="≥95%"
+                android:textColor="#141A29"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:text="≥90%"
+                android:textColor="#141A29"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_health_run_bg"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="相关证书及报告"
+                android:textColor="#141A29"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="风机可靠性测试报告"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="PM2.5颗粒物净化效率报告"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="杀灭微生物测试报告"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="臭氧浓度测试报告"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="负离子浓度测试报告"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="奥的斯机电实验室"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/shape_health_1_item_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:text="广东省微生物分析检测中心"
+                    android:textColor="@color/black_141A29"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_health_1_item_circle" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

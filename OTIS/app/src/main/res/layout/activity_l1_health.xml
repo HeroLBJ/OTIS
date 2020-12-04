@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7D8D1"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title_l1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                style="@style/title_bold"
+                android:text="电梯隐患都在"
+                android:textColor="#141A29"
+                android:textSize="23sp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:clipChildren="false"
+                android:layout_height="320dp" />
+
+            <com.bocweb.otis.util.ui.MaxViewPager
+                android:id="@+id/vp_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
