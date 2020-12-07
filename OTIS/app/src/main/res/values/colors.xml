@@ -16,4 +16,5 @@
     <color name="line_color">#C6C7C2</color>
     <color name="page_bg">#D7D8D0</color>
     <color name="image_bg">#7DA6D6</color>
+    <color name="text_color_select">#C79D5B</color>
 </resources>
