@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.aeeb.spare.AeebSpareActivity"></activity>
+        <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity"></activity>
+        <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
         <activity android:name=".ui.aeeb.good.AeebGoodActivity" />
         <activity android:name=".ui.aeeb.AeebSplashActivity">
             <intent-filter>
@@ -24,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.aeeb.AeebMainActivity" />
-        <activity android:name=".ui.aeeb.health.HealthActivity" /> <!-- 适配华为（huawei）刘海屏 -->
+        <activity android:name=".ui.aeeb.health.HealthActivity" />
+        <activity android:name=".ui.aeeb.pretty.detail.AeebPrettyDetailActivity" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
             android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->

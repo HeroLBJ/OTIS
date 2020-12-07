@@ -56,6 +56,7 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
+            android:id="@+id/tv_action_pretty"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginTop="200dp"

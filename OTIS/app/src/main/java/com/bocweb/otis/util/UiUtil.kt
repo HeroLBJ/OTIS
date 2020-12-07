@@ -1,15 +1,36 @@
 package com.bocweb.otis.util
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
+import android.graphics.Typeface
+import android.text.Html
 import android.view.View
+import android.view.animation.AccelerateInterpolator
+import android.view.animation.DecelerateInterpolator
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
+import com.bocweb.otis.R
+import com.bocweb.otis.ui.aeeb.pretty.detail.ImageInfo
 import com.bocweb.otis.util.ui.MaxViewPager
+import com.bocweb.otis.util.ui.ScaleTransitionPagerTitleView
+import com.bocweb.otis.util.ui.SquareImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.luck.picture.lib.PictureSelector
+import com.luck.picture.lib.entity.LocalMedia
 import com.to.aboomy.banner.Banner
+import net.lucode.hackware.magicindicator.MagicIndicator
+import net.lucode.hackware.magicindicator.buildins.UIUtil
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator
 
 fun ViewPager.init(
     fragmentM: FragmentManager,
@@ -35,6 +56,103 @@ fun MaxViewPager.init(
     return this
 }
 
-fun Banner.setNoMorePages(items:List<Any>){
+fun MagicIndicator.bindViewPager(
+    viewPager: ViewPager,
+    mDataList: List<String> = arrayListOf(),
+    mStringList: List<String> = arrayListOf(),
+    action: (index: Int) -> Unit = {}
+) {
+    val commonNavigator = CommonNavigator(context)
+    commonNavigator.adapter = object : CommonNavigatorAdapter() {
+        override fun getCount(): Int {
+            return if (mDataList.isNotEmpty()) {
+                mDataList.size
+            } else {
+                mStringList.size
+            }
+        }
 
+        override fun getTitleView(context: Context, index: Int): IPagerTitleView {
+            return ScaleTransitionPagerTitleView(context).apply {
+                text = if (mDataList.isNotEmpty()) {
+                    Html.fromHtml(mDataList[index])
+                } else {
+                    Html.fromHtml(mStringList[index])
+                }
+                textSize = 17f
+                normalColor = ContextCompat.getColor(context, R.color.black_141A29)
+                selectedColor = ContextCompat.getColor(context, R.color.black_141A29)
+                setOnClickListener {
+                    viewPager.currentItem = index
+                    action.invoke(index)
+                }
+            }
+        }
+
+        override fun getIndicator(context: Context): IPagerIndicator {
+            return LinePagerIndicator(context).apply {
+                mode = LinePagerIndicator.MODE_EXACTLY
+                //线条的宽高度
+                lineHeight = UIUtil.dip2px(context, 1.5).toFloat()
+                lineWidth = UIUtil.dip2px(context, 30.0).toFloat()
+                //线条的圆角
+                roundRadius = UIUtil.dip2px(context, 6.0).toFloat()
+                startInterpolator = AccelerateInterpolator()
+                endInterpolator = DecelerateInterpolator(2.0f)
+                //线条的颜色
+                setColors(ContextCompat.getColor(context, R.color.black_141A29))
+                yOffset = 10.dp2px().toFloat()
+            }
+        }
+    }
+    this.navigator = commonNavigator
+
+    viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        override fun onPageScrollStateChanged(state: Int) {
+            this@bindViewPager.onPageScrollStateChanged(state)
+        }
+
+        override fun onPageScrolled(
+            position: Int,
+            positionOffset: Float,
+            positionOffsetPixels: Int
+        ) {
+            this@bindViewPager.onPageScrolled(position, positionOffset, positionOffsetPixels)
+        }
+
+        override fun onPageSelected(position: Int) {
+            this@bindViewPager.onPageSelected(position)
+            action.invoke(position)
+        }
+    })
+}
+
+fun Banner.setNoMorePages(items: List<Any>) {
+
+}
+
+@SuppressLint("CheckResult")
+fun ImageView.load(imgPath: String?) {
+    val requestOptions = RequestOptions()
+    requestOptions.error(R.color.image_bg)
+    requestOptions.placeholder(R.color.image_bg)
+    Glide.with(context)
+        .load(imgPath ?: "")
+        .apply(requestOptions)
+        .into(this)
+}
+
+fun View.showImage(activity: Activity, photoArr: MutableList<ImageInfo>, index: Int) {
+    val showImgList: MutableList<LocalMedia> = ArrayList()
+    for (path in photoArr) {
+        val media = LocalMedia()
+        media.path = path.url
+        showImgList.add(media)
+    }
+
+    PictureSelector.create(activity)
+        .themeStyle(R.style.picture_default_style)
+        .isNotPreviewDownload(true)
+        .loadImageEngine(GlideEngine.createGlideEngine()) // 请参考Demo GlideEngine.java
+        .openExternalPreview(index, showImgList)
 }
