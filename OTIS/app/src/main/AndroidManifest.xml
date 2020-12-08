@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity"></activity>
+        <activity android:name=".ui.aeeb.more.AeebMoreActivity"></activity>
+        <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
         <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
         <activity android:name=".ui.aeeb.good.AeebGoodActivity" />
         <activity android:name=".ui.aeeb.AeebSplashActivity">

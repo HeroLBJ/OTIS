@@ -7,6 +7,7 @@ import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
 import com.bocweb.otis.ui.aeeb.good.AeebGoodActivity
 import com.bocweb.otis.ui.aeeb.health.HealthActivity
+import com.bocweb.otis.ui.aeeb.more.AeebMoreActivity
 import com.bocweb.otis.ui.aeeb.pretty.AeebPrettyActivity
 import com.bocweb.otis.ui.aeeb.spare.AeebSpareActivity
 import com.bocweb.otis.util.setClickNoRepeat
@@ -34,6 +35,11 @@ class AeebMainActivity : BaseActivity() {
 
         tv_action_pretty.setClickNoRepeat {
             val intent = Intent(this,AeebPrettyActivity::class.java)
+            startActivity(intent)
+        }
+
+        tv_action_more.setClickNoRepeat {
+            val intent = Intent(this,AeebMoreActivity::class.java)
             startActivity(intent)
         }
     }

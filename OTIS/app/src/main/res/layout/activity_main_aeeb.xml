@@ -38,6 +38,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tv_action_more"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_centerHorizontal="true"
