@@ -8,9 +8,9 @@
     tools:context=".ui.aeeb.AeebMainActivity">
 
     <RelativeLayout
-        android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <RelativeLayout
             android:id="@+id/rl_six_out"
@@ -25,9 +25,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:scaleY="1.01"
+                android:background="@drawable/home_six_center"
                 android:scaleX="1.01"
-                android:background="@drawable/home_six_center" />
+                android:scaleY="1.01" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -40,6 +40,7 @@
         <TextView
             android:id="@+id/tv_action_more"
             style="@style/main_six_title"
+            android:alpha="0"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-60dp"
@@ -47,8 +48,9 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
-            style="@style/main_six_title"
+            android:alpha="0"
             android:id="@+id/tv_action_health"
+            style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="15dp"
@@ -57,6 +59,7 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
+            android:alpha="0"
             android:id="@+id/tv_action_pretty"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
@@ -67,6 +70,7 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
+            android:alpha="0"
             android:id="@+id/tv_action_spare"
             style="@style/main_six_title"
             android:layout_below="@id/rl_six_out"
@@ -76,6 +80,7 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
+            android:alpha="0"
             android:id="@+id/tv_action_good"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
@@ -86,6 +91,8 @@
             app:drawableTopCompat="@drawable/send_dynamic_location" />
 
         <TextView
+            android:id="@+id/tv_action_speed"
+            android:alpha="0"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginStart="15dp"
@@ -98,14 +105,14 @@
 
     <TextView
         android:id="@+id/tv_help"
+        style="@style/title_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:text="点击查看秘籍"
         android:textColor="#141A29"
-        style="@style/title_bold"
-        android:gravity="center"
         android:textSize="13sp"
         app:drawableBottomCompat="@drawable/home_text_down_line" />
 
