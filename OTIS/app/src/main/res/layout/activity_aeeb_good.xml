@@ -1,28 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D7D8D2"
-    android:orientation="vertical"
-    tools:context=".ui.aeeb.good.AeebGoodActivity">
+    android:background="@drawable/home_good_bg">
 
-    <include layout="@layout/include_title_l1" />
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_title_l1" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:drawablePadding="5dp"
-        android:text="好钢结构"
-        android:textColor="#A6A9A8"
-        android:textSize="10sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
+    <View
+        android:layout_width="0.5dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp" />
+        android:layout_marginStart="34dp"
+        android:background="@color/ver_line_color" />
 
-</LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawableStart="@drawable/res_bottom"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="好钢结构"
+                android:textColor="#A6A9A8"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@id/v1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:background="@color/black_141A29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/home_good_img1"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/iv_img1"
+                            android:background="@color/black_141A29" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/shape_health_banner_line" />
+
+                        <TextView
+                            android:id="@+id/tv_title1"
+                            style="@style/title_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img1"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:text="全系顶配"
+                            android:textColor="#C79D5B"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:id="@+id/tv_desc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_title1"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="15dp"
+                            android:lineSpacingExtra="8dp"
+                            android:text="稀土永磁同步无齿轮条形主机\n能源再生变频控制柜\n永磁同步变频门机"
+                            android:textColor="#666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_action_play1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:drawableTop="@drawable/home_play"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="观看\n视频"
+                            android:textColor="#666"
+                            android:textSize="9sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/iv_num1"
+                    android:layout_width="36.5dp"
+                    android:layout_height="36.5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/res_f1"
+                    android:elevation="@dimen/dp_10" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@id/v2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:background="@color/black_141A29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_img2"
+                            android:background="@drawable/home_good_img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/iv_img2"
+                            android:background="@color/black_141A29" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/shape_health_banner_line" />
+
+                        <TextView
+                            android:id="@+id/tv_title2"
+                            style="@style/title_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img2"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:text="以静智动"
+                            android:textColor="#C79D5B"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:id="@+id/tv_desc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_title2"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="15dp"
+                            android:lineSpacingExtra="8dp"
+                            android:text="复合钢带无刚性摩擦\n盘式制动静音抱闸技术\n主机底座双层隔振设计"
+                            android:textColor="#666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_action_play2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:drawableTop="@drawable/home_play"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="观看\n视频"
+                            android:textColor="#666"
+                            android:textSize="9sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/iv_num2"
+                    android:layout_width="36.5dp"
+                    android:layout_height="36.5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/res_f2"
+                    android:elevation="@dimen/dp_10" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@id/v3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="@dimen/dp_10">
+
+                    <RelativeLayout
+                        android:background="@color/black_141A29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_img3"
+                            android:background="@drawable/home_good_img3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/iv_img3"
+                            android:background="@color/black_141A29" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/shape_health_banner_line" />
+
+                        <TextView
+                            android:id="@+id/tv_title3"
+                            style="@style/title_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img3"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:text="极致安全"
+                            android:textColor="#C79D5B"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:id="@+id/tv_desc3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_title3"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="15dp"
+                            android:lineSpacingExtra="8dp"
+                            android:text="奥的斯E3标准高于全球各地区标准\n钢带自动探伤\n坚固的门系统设计"
+                            android:textColor="#666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_action_play3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_img3"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:drawableTop="@drawable/home_play"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="观看\n视频"
+                            android:textColor="#666"
+                            android:textSize="9sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/iv_num3"
+                    android:layout_width="36.5dp"
+                    android:layout_height="36.5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/res_f3"
+                    android:elevation="@dimen/dp_10" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,40 +1,54 @@
 package com.bocweb.otis.ui.aeeb.good
 
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.animation.ObjectAnimator
+import android.view.View
+import androidx.core.widget.NestedScrollView
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.util.finishPage
-import com.bocweb.otis.util.startPageAnim
+import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_aeeb_good.*
-import kotlinx.android.synthetic.main.activity_aeeb_good.rootView
-import kotlinx.android.synthetic.main.activity_l1_health.*
+import kotlinx.android.synthetic.main.include_title_l1.*
 
 class AeebGoodActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_aeeb_good
 
-    override fun initView() {
-        rootView.startPageAnim(this)
-
-        val list = arrayListOf(
-            AeebGoodInfo(
-                R.drawable.home_good_img1, "全系顶配",
-                "稀土永磁同步无齿轮条形主机\n能源再生变频控制柜\n永磁同步变频门机",
-                R.drawable.res_f1
-            ),
-            AeebGoodInfo(
-                R.drawable.home_good_img2, "以静智动",
-                "复合钢带无刚性摩擦\n盘式制动静音抱闸技术\n主机底座双层隔振设计",
-                R.drawable.res_f2
-            ),
-            AeebGoodInfo(
-                R.drawable.home_good_img3, "极致安全",
-                "奥的斯E3标准高于全球各地区标准\n钢带自动探伤\n坚固的门系统设计",
-                R.drawable.res_f3
-            )
-        )
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = AeebGoodAdapter(list)
+    override fun initTitle() {
+        tv_title.text = "好电梯"
     }
 
-    override fun onBackPressed() { rootView.finishPage(this)}
+    override fun initView() {
+        rootView.startPageAnim(this)
+        translationY()
+    }
+
+    private var root3V = false
+
+    private fun translationY(scrollY: Int = 0) {
+        if (rl3.getLocalVisibleRect(this, scrollY) && !root3V) {
+            root3V = true
+            rl3.startAnim()
+        }
+    }
+
+    override fun initListener() {
+        rl_back.setClickNoRepeat { onBackPressed() }
+
+        scrollView.setOnScrollChangeListener(
+            NestedScrollView.OnScrollChangeListener
+            { _, _, scrollY, _, _ ->
+                translationY(scrollY)
+            })
+    }
+
+    private fun View.startAnim() {
+        val anim =
+            ObjectAnimator.ofFloat(this, "translationY", 0f, -15.dp2px().toFloat())
+        anim.duration = 1000
+        anim.startDelay = 200
+        anim.start()
+    }
+
+    override fun onBackPressed() {
+        rootView.finishPage(this)
+    }
 }
