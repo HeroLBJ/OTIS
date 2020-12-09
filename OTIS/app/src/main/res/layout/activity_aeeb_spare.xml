@@ -1,83 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rootView"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_less_bg">
 
-    <LinearLayout
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_title_l1" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="34dp"
+        android:background="@color/ver_line_color" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/page_bg"
-        android:orientation="vertical">
+        android:layout_below="@id/title">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingBottom="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:transitionName="action"
-                android:id="@+id/tv_title"
-                style="@style/title_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:drawableStart="@drawable/send_dynamic_location"
-                android:drawablePadding="10dp"
-                android:text="省电"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="24dp"
+                android:lineSpacingExtra="5dp"
+                android:text="节能环保是奥的斯始终履行的社会责任，奥的斯机电19年卖出的无机房电梯与传统非能源再生电梯相比，每年节能约1395万度，约减少1.39万吨的二氧化碳排放，相当于40公顷森林1年的二氧化碳吸收量。"
+                android:textColor="#444444"
+                android:textSize="13sp" />
 
-            <ImageView
-                android:id="@+id/iv_back"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/send_dynamic_location" />
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:lineSpacingExtra="5dp"
+                android:text="采用低功耗的LED轿内照明，轿内风扇照明智能控制，减小空梯时电能损耗。"
+                android:textColor="#444444"
+                android:textSize="13sp" />
 
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="28dp"
+                android:lineSpacingExtra="5dp"
+                android:text="整体符合TÜV认证A级能效。"
+                android:textColor="#444444"
+                android:textSize="13sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="24dp"
-            android:lineSpacingExtra="5dp"
-            android:text="节能环保是奥的斯始终履行的社会责任，奥的斯机电19年卖出的无机房电梯与传统非能源再生电梯相比，每年节能约1395万度，约减少1.39万吨的二氧化碳排放，相当于40公顷森林1年的二氧化碳吸收量。"
-            android:textColor="#444444"
-            android:textSize="13sp" />
+            <include layout="@layout/include_aeeb_spare_center" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            android:lineSpacingExtra="5dp"
-            android:text="采用低功耗的LED轿内照明，轿内风扇照明智能控制，减小空梯时电能损耗。"
-            android:textColor="#444444"
-            android:textSize="13sp" />
+            <include layout="@layout/include_aeeb_spare_bottom" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="28dp"
-            android:lineSpacingExtra="5dp"
-            android:text="整体符合TÜV认证A级能效。"
-            android:textColor="#444444"
-            android:textSize="13sp" />
+        </LinearLayout>
 
-        <include layout="@layout/include_aeeb_spare_center" />
+    </androidx.core.widget.NestedScrollView>
 
-        <include layout="@layout/include_aeeb_spare_bottom" />
+</RelativeLayout>
 
-    </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>

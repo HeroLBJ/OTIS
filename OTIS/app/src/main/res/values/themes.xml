@@ -42,7 +42,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">31dp</item>
         <item name="android:drawablePadding">10dp</item>
-        <item name="android:drawableStart">@drawable/spare_tree</item>
+        <item name="android:drawableStart">@drawable/t_left</item>
         <item name="android:textSize">20sp</item>
     </style>
 
