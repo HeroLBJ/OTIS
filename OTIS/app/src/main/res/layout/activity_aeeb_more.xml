@@ -4,8 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rootView"
-    android:background="@color/page_bg"
+    android:background="@drawable/home_more_bg"
     tools:context=".ui.aeeb.more.AeebMoreActivity">
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="34dp"
+        android:background="@color/ver_line_color" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp2_pager"

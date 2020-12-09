@@ -47,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-60dp"
             android:text="多"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_more" />
 
         <TextView
             android:alpha="0"
@@ -59,7 +59,7 @@
             android:transitionName="action"
             android:layout_toStartOf="@id/rl_six_out"
             android:text="健康"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_health" />
 
         <TextView
             android:alpha="0"
@@ -71,7 +71,7 @@
             android:layout_marginEnd="20dp"
             android:layout_toStartOf="@id/rl_six_out"
             android:text="美"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_beauty" />
 
         <TextView
             android:alpha="0"
@@ -82,7 +82,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:text="省"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_less" />
 
         <TextView
             android:alpha="0"
@@ -94,7 +94,7 @@
             android:transitionName="action"
             android:layout_toEndOf="@id/rl_six_out"
             android:text="好"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_good" />
 
         <TextView
             android:id="@+id/tv_action_speed"
@@ -106,7 +106,7 @@
             android:layout_marginTop="40dp"
             android:layout_toEndOf="@id/rl_six_out"
             android:text="快"
-            app:drawableTopCompat="@drawable/send_dynamic_location" />
+            app:drawableTopCompat="@drawable/home_chunk" />
 
     </RelativeLayout>
 

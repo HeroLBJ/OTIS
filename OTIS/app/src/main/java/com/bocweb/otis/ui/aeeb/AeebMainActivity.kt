@@ -53,6 +53,11 @@ class AeebMainActivity : BaseActivity() {
             anim.duration = 300
             anim.startDelay = item * 200L
             anim.start()
+
+            val anim2 = ObjectAnimator.ofFloat(actionList[item], "rotation", -10f,10f,-10f)
+            anim2.duration = 1500
+            anim2.repeatCount = ObjectAnimator.INFINITE
+            anim2.start()
         }
     }
 
@@ -69,5 +74,7 @@ class AeebMainActivity : BaseActivity() {
         set.start()
     }
 
-    override fun onBackPressed() { rootView.finishPage(this)}
+    override fun onBackPressed() {
+        rootView.finishPage(this)
+    }
 }
