@@ -3,12 +3,18 @@ package com.bocweb.otis.ui.aeeb.good
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
+import com.bocweb.otis.util.finishPage
+import com.bocweb.otis.util.startPageAnim
 import kotlinx.android.synthetic.main.activity_aeeb_good.*
+import kotlinx.android.synthetic.main.activity_aeeb_good.rootView
+import kotlinx.android.synthetic.main.activity_l1_health.*
 
 class AeebGoodActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_aeeb_good
 
     override fun initView() {
+        rootView.startPageAnim(this)
+
         val list = arrayListOf(
             AeebGoodInfo(
                 R.drawable.home_good_img1, "全系顶配",
@@ -29,4 +35,6 @@ class AeebGoodActivity : BaseActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = AeebGoodAdapter(list)
     }
+
+    override fun onBackPressed() { rootView.finishPage(this)}
 }

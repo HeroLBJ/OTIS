@@ -4,7 +4,9 @@ import androidx.fragment.app.Fragment
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
 import com.bocweb.otis.util.bindViewPager
+import com.bocweb.otis.util.finishPage
 import com.bocweb.otis.util.init
+import com.bocweb.otis.util.startPageAnim
 import kotlinx.android.synthetic.main.activity_aeeb_pretty_detail.*
 
 class AeebPrettyDetailActivity : BaseActivity() {
@@ -17,7 +19,11 @@ class AeebPrettyDetailActivity : BaseActivity() {
     private val titles = arrayListOf("外观", "内饰")
 
     override fun initView() {
+        rootView.startPageAnim(this)
+
         vp_pager.init(supportFragmentManager, fragments)
         indicator.bindViewPager(vp_pager, titles)
     }
+
+    override fun onBackPressed() {rootView.finishPage(this)}
 }

@@ -70,8 +70,8 @@
 
         <FrameLayout
             android:id="@+id/fl_good"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerInParent="true" />
 
     </RelativeLayout>
@@ -99,8 +99,8 @@
 
         <FrameLayout
             android:id="@+id/fl_bad"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_centerInParent="true" />
 
     </RelativeLayout>
@@ -124,6 +124,7 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="235dp"
         android:layout_height="10dp"
+        android:progressDrawable="@drawable/progress_bar_style"
         android:layout_below="@id/tv_bad_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -155,11 +156,11 @@
     <ImageView
         android:id="@+id/iv_repeat"
         android:layout_width="30dp"
-        android:visibility="gone"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/black_141A29" />
+        android:background="@color/black_141A29"
+        android:visibility="gone" />
 
 </RelativeLayout>

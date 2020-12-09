@@ -97,9 +97,9 @@ class Health3Fragment : BaseFragment() {
         set.start()
 
         set.doOnEnd {
-            if(!isCancelAllAnim){
+            if (!isCancelAllAnim) {
                 repeat2()
-            }else{
+            } else {
                 set.cancel()
             }
         }
@@ -129,11 +129,11 @@ class Health3Fragment : BaseFragment() {
         set.start()
 
         set.doOnEnd {
-            if(!isCancelAllAnim){
+            if (!isCancelAllAnim) {
                 animGood()
                 animBad()
                 animProgress()
-            }else{
+            } else {
                 set.cancel()
                 anim11.cancel()
             }
@@ -525,7 +525,7 @@ class Health3Fragment : BaseFragment() {
             if (!isCancel) {
                 val newAngle = random.nextFloat() * 360
                 animEndLabel(view, x, y, pointX, pointY, newAngle)
-            }else{
+            } else {
                 set.cancel()
             }
         }
@@ -541,7 +541,7 @@ class Health3Fragment : BaseFragment() {
         val anim2 = ObjectAnimator.ofFloat(tv_good_title, "translationX", 0f, 66.dp2px().toFloat())
         val anim3 = ObjectAnimator.ofFloat(tv_bad_title, "alpha", 1f, 0f)
         val anim4 = ObjectAnimator.ofFloat(rl_switch2, "alpha", 1f, 0f)
-        val anim5 = ObjectAnimator.ofFloat(rl_switch1, "translationX", 0f, 66.dp2px().toFloat())
+        val anim5 = ObjectAnimator.ofFloat(rl_switch1, "translationX", 0f, 70.dp2px().toFloat())
         val anim6 = ObjectAnimator.ofFloat(tv_time1, "alpha", 1f, 0f)
         val anim7 = ObjectAnimator.ofFloat(tv_time2, "alpha", 1f, 0f)
         set.duration = 1000
@@ -595,15 +595,12 @@ class Health3Fragment : BaseFragment() {
         anim1.doOnRepeat {
             if (!isCancelAllAnim) {
                 val worm = View(requireContext())
-                val lp = FrameLayout.LayoutParams(
-                    (random.nextInt(5) + 2).dp2px(),
-                    (random.nextInt(2) + 1).dp2px()
-                )
-                lp.marginStart = random.nextInt(70).dp2px()
-                lp.topMargin = random.nextInt(65).dp2px()
+                val lp = FrameLayout.LayoutParams(14, 8)
+                lp.marginStart = random.nextInt(45).dp2px()
+                lp.topMargin = random.nextInt(45).dp2px()
                 worm.rotation = random.nextFloat() * 360
                 worm.layoutParams = lp
-                worm.setBackgroundResource(R.drawable.shape_black_worm)
+                worm.setBackgroundResource(R.drawable.res_xijun)
                 fl_good.addView(worm)
             } else {
                 anim1.cancel()
@@ -613,8 +610,8 @@ class Health3Fragment : BaseFragment() {
 
     private fun animBad() {
         val anim1 = ObjectAnimator.ofFloat(fl_bad, "alpha", 1f, 1f)
-        anim1.duration = 200
-        anim1.repeatCount = 60
+        anim1.duration = 333
+        anim1.repeatCount = 36
         anim1.start()
 
         anim1.doOnStart {
@@ -628,15 +625,12 @@ class Health3Fragment : BaseFragment() {
         anim1.doOnRepeat {
             if (!isCancelAllAnim) {
                 val worm = View(requireContext())
-                val lp = FrameLayout.LayoutParams(
-                    (random.nextInt(5) + 2).dp2px(),
-                    (random.nextInt(2) + 1).dp2px()
-                )
-                lp.marginStart = random.nextInt(70).dp2px()
-                lp.topMargin = random.nextInt(65).dp2px()
+                val lp = FrameLayout.LayoutParams(14, 8)
+                lp.marginStart = random.nextInt(45).dp2px()
+                lp.topMargin = random.nextInt(45).dp2px()
                 worm.rotation = random.nextFloat() * 360
                 worm.layoutParams = lp
-                worm.setBackgroundResource(R.drawable.shape_black_worm)
+                worm.setBackgroundResource(R.drawable.res_xijun)
                 fl_bad.addView(worm)
             } else {
                 anim1.cancel()

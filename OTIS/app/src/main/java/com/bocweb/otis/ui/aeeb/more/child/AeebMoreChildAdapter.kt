@@ -20,10 +20,10 @@ class AeebMoreChildAdapter(data: MutableList<AeebInfo>) :
             setText(R.id.tv_desc, item.desc1)
             setBackgroundColor(R.id.iv_no, item.image2)
 
-            getView<View>(R.id.action).setClickNoRepeat {
-                val intent = Intent(context, AeebMoreDetailActivity::class.java)
-                context.startActivity(intent)
-            }
+//            getView<View>(R.id.action).setClickNoRepeat {
+//                val intent = Intent(context, AeebMoreDetailActivity::class.java)
+//                context.startActivity(intent)
+//            }
         }
     }
 }

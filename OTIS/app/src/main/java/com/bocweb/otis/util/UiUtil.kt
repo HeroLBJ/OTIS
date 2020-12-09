@@ -3,7 +3,8 @@ package com.bocweb.otis.util
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
-import android.graphics.Typeface
+import android.graphics.Point
+import android.graphics.Rect
 import android.text.Html
 import android.view.View
 import android.view.animation.AccelerateInterpolator
@@ -13,12 +14,13 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.bocweb.otis.R
 import com.bocweb.otis.ui.aeeb.pretty.detail.ImageInfo
 import com.bocweb.otis.util.ui.MaxViewPager
 import com.bocweb.otis.util.ui.ScaleTransitionPagerTitleView
-import com.bocweb.otis.util.ui.SquareImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.luck.picture.lib.PictureSelector
@@ -155,4 +157,30 @@ fun View.showImage(activity: Activity, photoArr: MutableList<ImageInfo>, index: 
         .isNotPreviewDownload(true)
         .loadImageEngine(GlideEngine.createGlideEngine()) // 请参考Demo GlideEngine.java
         .openExternalPreview(index, showImgList)
+}
+
+fun View.getLocalVisibleRect(activity: Activity, offsetY: Int): Boolean {
+    val p = Point()
+    activity.windowManager.defaultDisplay.getSize(p)
+    val screenWidth: Int = p.x
+    val screenHeight: Int = p.y
+    val rect = Rect(0, 0, screenWidth, screenHeight) //得到屏幕矩阵
+    val location = IntArray(2)
+    location[1] = location[1] + offsetY.dp2px()
+    getLocationInWindow(location)
+    tag = location[1] //存储y方向的位置
+    return getLocalVisibleRect(rect)
+}
+
+fun RecyclerView.isVisBottom(): Boolean {
+    val layoutManager = layoutManager as LinearLayoutManager
+    //屏幕中最后一个可见子项的position
+    val lastVisibleItemPosition: Int = layoutManager.findLastVisibleItemPosition()
+    //当前屏幕所看到的子项个数
+    val visibleItemCount: Int = layoutManager.childCount
+    //当前RecyclerView的所有子项个数
+    val totalItemCount: Int = layoutManager.itemCount
+    //RecyclerView的滑动状态
+    val state: Int = scrollState
+    return visibleItemCount > 0 && lastVisibleItemPosition == totalItemCount - 1 && state == RecyclerView.SCROLL_STATE_IDLE
 }

@@ -7,15 +7,26 @@
 
     <TextView
         android:id="@+id/tv_title"
+        style="@style/aeeb_title"
+        android:layout_centerVertical="true"
+        android:drawableStart="@drawable/t_left"
         android:text="守护健康"
-       style="@style/aeeb_title" />
+        android:transitionName="action" />
 
-    <ImageView
-        android:id="@+id/iv_back"
+    <RelativeLayout
+        android:id="@+id/rl_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/send_dynamic_location" />
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="20dp"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/t_rigth" />
+    </RelativeLayout>
 
 </RelativeLayout>

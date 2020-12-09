@@ -2,7 +2,6 @@ package com.bocweb.otis.ui.aeeb
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Intent
 import androidx.core.animation.doOnEnd
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
@@ -11,56 +10,33 @@ import com.bocweb.otis.ui.aeeb.health.HealthActivity
 import com.bocweb.otis.ui.aeeb.more.AeebMoreActivity
 import com.bocweb.otis.ui.aeeb.pretty.AeebPrettyActivity
 import com.bocweb.otis.ui.aeeb.spare.AeebSpareActivity
-import com.bocweb.otis.util.setClickNoRepeat
+import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_main_aeeb.*
-import java.util.*
+import kotlinx.android.synthetic.main.activity_main_aeeb.rootView
+import kotlinx.android.synthetic.main.activity_main_aeeb.tv_title
 
 class AeebMainActivity : BaseActivity() {
 
     override fun getLayoutId() = R.layout.activity_main_aeeb
 
-    private val random by lazy { Random() }
     private val actionList by lazy {
         arrayListOf(
-            tv_action_more,
-            tv_action_speed,
-            tv_action_good,
-            tv_action_spare,
-            tv_action_pretty,
-            tv_action_health
+            tv_action_more, tv_action_speed, tv_action_good,
+            tv_action_spare, tv_action_pretty, tv_action_health
         )
     }
 
     override fun initListener() {
-        tv_action_health.setClickNoRepeat {
-            val intent = Intent(this, HealthActivity::class.java)
-            startActivity(intent)
-        }
-
-        tv_action_spare.setClickNoRepeat {
-            val intent = Intent(this, AeebSpareActivity::class.java)
-            startActivity(intent)
-        }
-
-        tv_action_good.setClickNoRepeat {
-            val intent = Intent(this, AeebGoodActivity::class.java)
-            startActivity(intent)
-        }
-
-        tv_action_pretty.setClickNoRepeat {
-            val intent = Intent(this, AeebPrettyActivity::class.java)
-            startActivity(intent)
-        }
-
-        tv_action_more.setClickNoRepeat {
-            val intent = Intent(this, AeebMoreActivity::class.java)
-            startActivity(intent)
-        }
+        tv_action_health.setClickNoRepeat { it.startPage(this, HealthActivity::class.java) }
+        tv_action_spare.setClickNoRepeat { it.startPage(this, AeebSpareActivity::class.java) }
+        tv_action_good.setClickNoRepeat { it.startPage(this, AeebGoodActivity::class.java) }
+        tv_action_pretty.setClickNoRepeat { it.startPage(this, AeebPrettyActivity::class.java) }
+        tv_action_more.setClickNoRepeat { it.startPage(this, AeebMoreActivity::class.java) }
     }
 
     override fun initData() {
         val animBgAlpha = ObjectAnimator.ofFloat(iv_bg, "alpha", 1f, 0f)
-        animBgAlpha.duration = 2000
+        animBgAlpha.duration = 1500
         animBgAlpha.start()
         animBgAlpha.doOnEnd { animAction() }
 
@@ -74,8 +50,8 @@ class AeebMainActivity : BaseActivity() {
     private fun animAction() {
         for (item in actionList.indices) {
             val anim = ObjectAnimator.ofFloat(actionList[item], "alpha", 0f, 1f)
-            anim.duration = 500
-            anim.startDelay = item * 500L
+            anim.duration = 300
+            anim.startDelay = item * 200L
             anim.start()
         }
     }
@@ -92,4 +68,6 @@ class AeebMainActivity : BaseActivity() {
         set.duration = 2000
         set.start()
     }
+
+    override fun onBackPressed() { rootView.finishPage(this)}
 }

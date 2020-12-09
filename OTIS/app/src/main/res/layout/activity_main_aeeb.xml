@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rootView"
     android:background="#D7D8D1"
     tools:context=".ui.aeeb.AeebMainActivity">
 
@@ -41,6 +42,7 @@
             android:id="@+id/tv_action_more"
             style="@style/main_six_title"
             android:alpha="0"
+            android:transitionName="action"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-60dp"
@@ -54,6 +56,7 @@
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="15dp"
+            android:transitionName="action"
             android:layout_toStartOf="@id/rl_six_out"
             android:text="健康"
             app:drawableTopCompat="@drawable/send_dynamic_location" />
@@ -62,6 +65,7 @@
             android:alpha="0"
             android:id="@+id/tv_action_pretty"
             style="@style/main_six_title"
+            android:transitionName="action"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginTop="200dp"
             android:layout_marginEnd="20dp"
@@ -72,6 +76,7 @@
         <TextView
             android:alpha="0"
             android:id="@+id/tv_action_spare"
+            android:transitionName="action"
             style="@style/main_six_title"
             android:layout_below="@id/rl_six_out"
             android:layout_centerHorizontal="true"
@@ -86,6 +91,7 @@
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginStart="20dp"
             android:layout_marginTop="200dp"
+            android:transitionName="action"
             android:layout_toEndOf="@id/rl_six_out"
             android:text="好"
             app:drawableTopCompat="@drawable/send_dynamic_location" />
@@ -93,6 +99,7 @@
         <TextView
             android:id="@+id/tv_action_speed"
             android:alpha="0"
+            android:transitionName="action"
             style="@style/main_six_title"
             android:layout_alignTop="@id/rl_six_out"
             android:layout_marginStart="15dp"

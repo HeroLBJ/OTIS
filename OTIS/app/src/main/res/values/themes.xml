@@ -19,6 +19,11 @@
         <!--是否覆盖执行，其实可以理解成是否同步执行还是顺序执行-->
         <item name="android:windowAllowEnterTransitionOverlap">false</item>
         <item name="android:windowAllowReturnTransitionOverlap">false</item>
+
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
     <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
@@ -35,7 +40,7 @@
     <style name="aeeb_title" parent="title_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginStart">31dp</item>
         <item name="android:drawablePadding">10dp</item>
         <item name="android:drawableStart">@drawable/spare_tree</item>
         <item name="android:textSize">20sp</item>

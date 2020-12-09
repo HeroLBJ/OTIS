@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.aeeb.more.detail.AeebMoreDetailActivity"></activity>
+        <activity android:name=".ui.aeeb.more.detail.AeebMoreDetailActivity"/>
         <activity android:name=".ui.aeeb.more.AeebMoreActivity" />
         <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
         <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
@@ -27,7 +27,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.aeeb.AeebMainActivity" />
-        <activity android:name=".ui.aeeb.health.HealthActivity" />
+        <activity android:name=".ui.aeeb.health.HealthActivity"
+            android:theme="@style/Theme.AEEB"
+            />
         <activity android:name=".ui.aeeb.pretty.detail.AeebPrettyDetailActivity" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"

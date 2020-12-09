@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/res_back_left"
+        android:drawablePadding="18.5dp"
         android:text="返回"
         android:textSize="10sp" />
 
@@ -76,6 +78,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="3.5dp"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/home_beauty_photo"
                         android:text="案例中心"
                         android:textColor="#7C8591"
                         android:textSize="10sp" />
@@ -85,6 +89,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="88dp"
                         android:drawablePadding="3.5dp"
+                        android:drawableTop="@drawable/home_beauty_diy"
+                        android:gravity="center"
                         android:text="DIY"
                         android:textColor="#7C8591"
                         android:textSize="10sp" />

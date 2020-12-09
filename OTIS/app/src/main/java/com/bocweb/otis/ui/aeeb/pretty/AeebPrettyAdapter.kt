@@ -1,26 +1,29 @@
 package com.bocweb.otis.ui.aeeb.pretty
 
-import android.content.Intent
+import android.app.Activity
 import android.view.View
 import com.bocweb.otis.R
+import com.bocweb.otis.ui.aeeb.common.AeebInfo
 import com.bocweb.otis.ui.aeeb.pretty.detail.AeebPrettyDetailActivity
 import com.bocweb.otis.util.setClickNoRepeat
+import com.bocweb.otis.util.startPage
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 
-class AeebPrettyAdapter(data: MutableList<AeebPrettyInfo>) :
-    BaseQuickAdapter<AeebPrettyInfo, BaseViewHolder>
+class AeebPrettyAdapter(data: MutableList<AeebInfo>) :
+    BaseQuickAdapter<AeebInfo, BaseViewHolder>
         (R.layout.adapter_aeeb_pretty, data) {
 
-    override fun convert(holder: BaseViewHolder, item: AeebPrettyInfo) {
+    override fun convert(holder: BaseViewHolder, item: AeebInfo) {
         holder.apply {
-            getView<View>(R.id.iv_bg).setBackgroundColor(item.color)
+            getView<View>(R.id.iv_bg).setBackgroundResource(item.image1)
             setText(R.id.tv_title, item.title)
 
-            getView<View>(R.id.action).setClickNoRepeat {
-                val intent = Intent(context, AeebPrettyDetailActivity::class.java)
-                context.startActivity(intent)
+            val rootView = getView<View>(R.id.rootView)
+            rootView.setClickNoRepeat {
+                rootView.startPage(context, AeebPrettyDetailActivity::class.java)
             }
         }
     }
+
 }

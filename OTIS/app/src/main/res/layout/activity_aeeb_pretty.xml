@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/page_bg"
+    android:background="@drawable/home_beauti_bg"
     android:orientation="vertical"
     tools:context=".ui.aeeb.pretty.AeebPrettyActivity">
 
-    <include layout="@layout/include_title_l1" />
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_title_l1" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="34dp"
+        android:background="@color/ver_line_color" />
 
     <TextView
+        android:id="@+id/t1"
         style="@style/title_bold"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/title"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:text="“建筑的实质是空间，空间的本质是为人服务”"
         android:textColor="#444"
         android:textSize="13sp" />
 
     <TextView
+        android:id="@+id/t2"
         style="@style/title_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/t1"
         android:layout_marginStart="52dp"
         android:layout_marginTop="12dp"
         android:text="——约翰.波特曼"
@@ -30,9 +43,11 @@
         android:textSize="13sp" />
 
     <TextView
+        android:id="@+id/t3"
         style="@style/title_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/t2"
         android:layout_marginStart="52dp"
         android:layout_marginTop="12dp"
         android:text="电梯空间是建筑空间的延伸，是建筑美学的一部分。"
@@ -43,6 +58,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/t3"
         android:layout_gravity="center_horizontal" />
 
-</LinearLayout>
+</RelativeLayout>
