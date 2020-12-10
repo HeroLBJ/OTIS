@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mod_splash_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/line1"
+            style="@style/mod_splash_line" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/line2"
+            style="@style/mod_splash_line" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/line3"
+            style="@style/mod_splash_line" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/line4"
+            style="@style/mod_splash_line" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:id="@+id/rect1"
+        style="@style/mod_splash_rect"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/center" />
+
+    <View
+        android:id="@+id/rect2"
+        style="@style/mod_splash_rect"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/center" />
+
+    <View
+        android:id="@+id/rect3"
+        style="@style/mod_splash_rect"
+        android:layout_width="135dp"
+        android:layout_height="163dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/center" />
+
+    <View
+        android:id="@+id/rect4"
+        style="@style/mod_splash_rect"
+        android:layout_width="135dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/center" />
+
+    <View
+        android:id="@+id/rect5"
+        style="@style/mod_splash_rect"
+        android:layout_width="135dp"
+        android:layout_height="163dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:text="B E X  /  M O D +"
+        android:textColor="@color/text_color_select"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_logo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="288dp"
+        android:alpha="0"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新，为更好生活"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="Otis为电梯更新\n为生活焕新"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_splash_action"
+        style="@style/title_bold"
+        android:layout_width="226dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:alpha="0"
+        android:onClick="onAction"
+        android:background="@drawable/mod_splash_bottom_button"
+        android:elevation="@dimen/dp_10"
+        android:gravity="center"
+        android:text="开始探索"
+        android:textSize="15sp" />
+
+</RelativeLayout>

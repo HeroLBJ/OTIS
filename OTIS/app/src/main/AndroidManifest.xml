@@ -14,22 +14,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.aeeb.more.detail.AeebMoreDetailActivity"/>
-        <activity android:name=".ui.aeeb.more.AeebMoreActivity" />
-        <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
-        <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
-        <activity android:name=".ui.aeeb.good.AeebGoodActivity" />
-        <activity android:name=".ui.aeeb.AeebSplashActivity">
+        <activity android:name=".ui.mod.ModMainActivity"/>
+        <activity android:name=".ui.mod.ModSplashActivity"
+            android:theme="@style/FullScreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.aeeb.more.detail.AeebMoreDetailActivity" />
+        <activity android:name=".ui.aeeb.more.AeebMoreActivity" />
+        <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
+        <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
+        <activity android:name=".ui.aeeb.good.AeebGoodActivity" />
+        <activity android:name=".ui.aeeb.AeebSplashActivity">
+
+        </activity>
         <activity android:name=".ui.aeeb.AeebMainActivity" />
-        <activity android:name=".ui.aeeb.health.HealthActivity"
-            android:theme="@style/Theme.AEEB"
-            />
+        <activity
+            android:name=".ui.aeeb.health.HealthActivity"
+            android:theme="@style/Theme.AEEB" />
         <activity android:name=".ui.aeeb.pretty.detail.AeebPrettyDetailActivity" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"

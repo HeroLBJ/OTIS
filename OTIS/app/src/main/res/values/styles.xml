@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="line_left_34">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">34dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="mod_main_1_text" parent="@style/title_bold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">1</item>
+        <item name="android:lineSpacingExtra">-3dp</item>
+    </style>
+</resources>

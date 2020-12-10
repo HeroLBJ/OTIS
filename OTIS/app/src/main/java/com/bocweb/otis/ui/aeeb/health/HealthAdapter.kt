@@ -30,15 +30,15 @@ class HealthAdapter(private val context: Context) : PagerAdapter() {
         when (position) {
             1 -> {
                 tvTitle.text = "电梯轿壁传播病毒"
-                ivBg.setBackgroundResource(R.drawable.ic_launcher_background)
+                ivBg.setBackgroundResource(R.drawable.health_big1)
             }
             2 -> {
                 tvTitle.text = "电梯按钮传播病毒"
-                ivBg.setBackgroundResource(R.drawable.ic_launcher_background)
+                ivBg.setBackgroundResource(R.drawable.health_big2)
             }
             else -> {
                 tvTitle.text = "电梯密闭空间空气易污染"
-                ivBg.setBackgroundResource(R.drawable.ic_launcher_background)
+                ivBg.setBackgroundResource(R.drawable.health_big3)
             }
         }
 

@@ -17,10 +17,10 @@ fun View.getCenterY(): Int {
     return top / 2 + bottom / 2
 }
 
-fun View.startPage(context: Context, cls: Class<*>?) {
+fun View.startPage(context: Context, cls: Class<*>?, pointX: Int = 0, pointY: Int = 0) {
     val intent = Intent(context, cls)
-    intent.putExtra("X", getCenterX())
-    intent.putExtra("Y", getCenterY())
+    intent.putExtra("X", if (pointX == 0) getCenterX() else pointX)
+    intent.putExtra("Y", if (pointY == 0) getCenterY() else pointY)
     context.startActivity(intent)
 }
 

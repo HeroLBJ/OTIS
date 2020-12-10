@@ -94,4 +94,28 @@
         <!--        左下圆角大小-->
         <attr name="rcv_bottomLeftRadius" format="dimension" />
     </declare-styleable>
+
+    <style name="mod_splash_rect">
+        <item name="android:layout_marginTop">700dp</item>
+        <item name="android:layout_width">135dp</item>
+        <item name="android:layout_height">163dp</item>
+        <item name="android:background">@drawable/mod_splash_rect</item>
+    </style>
+
+    <style name="mod_splash_line">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <declare-styleable name="TitleView">
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+    <style name="common_title_style">
+        <item name="android:layout_marginTop">22dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>
