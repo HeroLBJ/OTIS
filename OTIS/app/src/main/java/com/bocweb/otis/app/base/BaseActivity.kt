@@ -11,6 +11,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        createAgo()
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
         ImmersionBar.with(this).init()
@@ -20,6 +21,8 @@ abstract class BaseActivity : AppCompatActivity() {
         initListener()
         initData()
     }
+
+    open fun createAgo() {}
 
     open fun initTitle() {}
 
