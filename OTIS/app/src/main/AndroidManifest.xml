@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.mod.rule.MobRuleActivity"></activity>
+        <activity android:name=".ui.mod.plan.ModPlan2Activity"></activity>
+        <activity android:name=".ui.mod.plan.ModPlan1Activity" />
+        <activity android:name=".ui.mod.chart.ModChartActivity" />
+        <activity android:name=".ui.mod.rule.ModRule3Activity" />
+        <activity android:name=".ui.mod.rule.ModRule2Activity" />
+        <activity android:name=".ui.mod.rule.ModRule1Activity" />
         <activity android:name=".ui.mod.ModMainActivity" />
         <activity
             android:name=".ui.mod.ModSplashActivity"
@@ -30,7 +35,7 @@
         <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
         <activity android:name=".ui.aeeb.spare.AeebSpareActivity" />
         <activity android:name=".ui.aeeb.good.AeebGoodActivity" />
-        <activity android:name=".ui.aeeb.AeebSplashActivity"></activity>
+        <activity android:name=".ui.aeeb.AeebSplashActivity" />
         <activity android:name=".ui.aeeb.AeebMainActivity" />
         <activity
             android:name=".ui.aeeb.health.HealthActivity"

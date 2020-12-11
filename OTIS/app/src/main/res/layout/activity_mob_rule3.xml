@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <com.bocweb.otis.util.ui.TitleView
+        android:id="@+id/tv_title"
+        style="@style/common_title_style"
+        app:title="您可能想要查看" />
+
+    <View style="@style/line_left_34" />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <View
+        style="@style/line_left_34"
+        android:layout_marginEnd="47dp"
+        android:layout_toStartOf="@id/center" />
+
+    <View
+        style="@style/line_left_34"
+        android:layout_marginStart="47dp"
+        android:layout_toEndOf="@id/center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+       android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_top"
+            android:layout_width="247.5dp"
+            android:layout_height="247.5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black_141A29"
+            android:onClick="onActionTop">
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="奥的斯机电改造\n解决方案"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/action_bottom"
+            android:layout_width="247.5dp"
+            android:layout_height="247.5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@color/black_141A29"
+            android:onClick="onActionBottom">
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="传统整梯换新面临\n的问题"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

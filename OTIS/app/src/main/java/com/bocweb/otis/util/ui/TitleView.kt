@@ -1,6 +1,7 @@
 package com.bocweb.otis.util.ui
 
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -15,7 +16,10 @@ class TitleView(context: Context, attrs: AttributeSet?) : LinearLayout(context, 
 
         val array = context.obtainStyledAttributes(attrs, R.styleable.TitleView)
         val title = array.getString(R.styleable.TitleView_title)
-        tvTitle.text = title?:""
+        val titleColor = array.getColor(R.styleable.TitleView_title_color, Color.BLACK)
+        tvTitle.text = title ?: ""
+        tvTitle.setTextColor(titleColor)
         addView(rootView)
+        array.recycle()
     }
 }

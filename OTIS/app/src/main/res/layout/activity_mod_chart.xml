@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <com.bocweb.otis.util.ui.TitleView
+        android:id="@+id/tv_title"
+        style="@style/common_title_style"
+        app:title="问题可能存在于"
+        app:title_color="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42.5dp"
+        android:layout_marginTop="53dp"
+        android:text="*以下数据仅为理论状态下推测的数据"
+        android:textColor="#999"
+        android:textSize="10sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="482.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="97.5dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="15dp" />
+
+</RelativeLayout>

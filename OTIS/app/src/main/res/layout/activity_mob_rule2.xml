@@ -9,7 +9,7 @@
     <com.bocweb.otis.util.ui.TitleView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
-        app:title="问题可能存在于" />
+        app:title="电梯经常老化的部位" />
 
     <View style="@style/line_left_34" />
 
@@ -47,7 +47,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="113dp"
             android:layout_height="35.5dp"
-            android:layout_marginStart="243.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="18.5dp"
             android:layout_marginTop="167.5dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="5dp"

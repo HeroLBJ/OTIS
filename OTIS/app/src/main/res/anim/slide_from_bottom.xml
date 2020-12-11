@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- 从顶部进入:100% -> 0 -->
+    <!-- 从底部进入:-100% -> 0 -->
     <translate
         android:duration="2000"
         android:fromYDelta="100%p"
         android:interpolator="@android:anim/accelerate_decelerate_interpolator"
-        android:toYDelta="0%p" />
+        android:toYDelta="0" />
 </set>
