@@ -2,16 +2,14 @@ package com.bocweb.otis.ui.mod
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Intent
 import android.view.View
-import android.widget.Toast
 import androidx.core.animation.doOnEnd
+import com.bocweb.otis.MainActivity
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.util.dp2px
-import com.bocweb.otis.util.setClickNoRepeat
-import com.bocweb.otis.util.startPage
+import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_mod_splash.*
+import kotlinx.android.synthetic.main.activity_mod_splash.rootView
 
 class ModSplashActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_mod_splash
@@ -19,10 +17,13 @@ class ModSplashActivity : BaseActivity() {
     private val screenHeight = 667.dp2px().toFloat()
 
     override fun initView() {
+        rootView.startPageAnim(this)
         animLine()
     }
 
-    fun onAction(it: View) { it.startPage(this, ModMainActivity::class.java) }
+    fun onAction(it: View) {
+        startPageDownY(ModMainActivity::class.java, finish = true)
+    }
 
     private fun animLine() {
         val set = AnimatorSet()

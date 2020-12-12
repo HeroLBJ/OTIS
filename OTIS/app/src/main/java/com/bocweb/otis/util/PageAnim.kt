@@ -1,7 +1,6 @@
 package com.bocweb.otis.util
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.view.View
 import android.view.ViewAnimationUtils
@@ -18,23 +17,43 @@ fun View.getCenterY(): Int {
     return top / 2 + bottom / 2
 }
 
-fun View.startPage(context: Context, cls: Class<*>?, pointX: Int = 0, pointY: Int = 0) {
+fun View.startPage(
+    context: Activity,
+    cls: Class<*>?,
+    pointX: Int = 0,
+    pointY: Int = 0
+) {
     val intent = Intent(context, cls)
     intent.putExtra("X", if (pointX == 0) getCenterX() else pointX)
     intent.putExtra("Y", if (pointY == 0) getCenterY() else pointY)
     context.startActivity(intent)
 }
 
+fun View.startPageIndex(
+    context: Activity,
+    cls: Class<*>?,
+    index: Int = 0,
+    pointX: Int = 0,
+    pointY: Int = 0
+) {
+    val intent = Intent(context, cls)
+    intent.putExtra("X", if (pointX == 0) getCenterX() else pointX)
+    intent.putExtra("Y", if (pointY == 0) getCenterY() else pointY)
+    intent.putExtra("page", index)
+    context.startActivity(intent)
+}
+
 // 从底部出来
-fun Activity.startPageDownY(cls: Class<*>?){
+fun Activity.startPageDownY(cls: Class<*>?, finish: Boolean = false) {
     runOnUiThread {
         val intent = Intent(this, cls)
         startActivity(intent)
         overridePendingTransition(R.anim.slide_from_bottom, R.anim.slide_to_top)
+        if (finish) finish()
     }
 }
 
-fun Activity.startPageUpY(cls: Class<*>?){
+fun Activity.startPageUpY(cls: Class<*>?) {
     runOnUiThread {
         val intent = Intent(this, cls)
         startActivity(intent)
@@ -66,7 +85,7 @@ fun View.finishPage(activity: Activity) {
     anim.duration = 1000
     anim.interpolator = AccelerateDecelerateInterpolator()
     anim.doOnEnd {
-//        alpha = 0f
+        alpha = 0f
         visibility = View.GONE
         activity.finish()
     }

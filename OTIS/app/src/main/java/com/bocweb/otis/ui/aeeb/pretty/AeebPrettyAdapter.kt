@@ -10,7 +10,7 @@ import com.bocweb.otis.util.startPage
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 
-class AeebPrettyAdapter(data: MutableList<AeebInfo>) :
+class AeebPrettyAdapter(private val act:Activity,data: MutableList<AeebInfo>) :
     BaseQuickAdapter<AeebInfo, BaseViewHolder>
         (R.layout.adapter_aeeb_pretty, data) {
 
@@ -21,7 +21,7 @@ class AeebPrettyAdapter(data: MutableList<AeebInfo>) :
 
             val rootView = getView<View>(R.id.rootView)
             rootView.setClickNoRepeat {
-                rootView.startPage(context, AeebPrettyDetailActivity::class.java)
+                rootView.startPage(act, AeebPrettyDetailActivity::class.java)
             }
         }
     }

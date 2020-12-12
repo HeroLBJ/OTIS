@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.include_title_l1.*
 class AeebPrettyActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_aeeb_pretty
 
-    private val adapter by lazy { AeebPrettyAdapter(list) }
+    private val adapter by lazy { AeebPrettyAdapter(this,list) }
     private val list by lazy { getAeebPrettyData() }
 
     override fun initTitle() {

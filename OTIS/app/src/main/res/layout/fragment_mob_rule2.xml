@@ -21,6 +21,7 @@
         android:background="@color/black_141A29" />
 
     <RelativeLayout
+        android:id="@+id/rl_actions"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -118,7 +119,7 @@
                 android:background="@color/black_141A29"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
-                android:text="轿厢系统"
+                android:text="门厅系统"
                 android:textSize="11sp" />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

@@ -21,10 +21,12 @@
         android:background="@color/black_141A29" />
 
     <RelativeLayout
+        android:id="@+id/rl_actions"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cd_label1"
             android:layout_width="113dp"
             android:layout_height="35.5dp"
             android:layout_marginStart="32dp"
@@ -43,9 +45,9 @@
                 android:textSize="11sp" />
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
             android:layout_width="113dp"
+            android:id="@+id/cd_label2"
             android:layout_height="35.5dp"
             android:layout_marginStart="243.5dp"
             android:layout_marginTop="167.5dp"
@@ -67,6 +69,7 @@
             android:layout_width="113dp"
             android:layout_height="35.5dp"
             android:layout_marginStart="79dp"
+            android:id="@+id/cd_label3"
             android:layout_marginTop="224.5dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="5dp"
@@ -85,6 +88,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="113dp"
             android:layout_height="35.5dp"
+            android:id="@+id/cd_label4"
             android:layout_marginStart="224.5dp"
             android:layout_marginTop="339.5dp"
             app:cardCornerRadius="4dp"
@@ -104,6 +108,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="113dp"
             android:layout_height="35.5dp"
+            android:id="@+id/cd_label5"
             android:layout_marginStart="198dp"
             android:layout_marginTop="470dp"
             app:cardCornerRadius="4dp"
@@ -116,7 +121,7 @@
                 android:background="@color/black_141A29"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
-                android:text="轿厢系统"
+                android:text="门厅系统"
                 android:textSize="11sp" />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

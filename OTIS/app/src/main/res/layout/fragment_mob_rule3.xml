@@ -41,8 +41,7 @@
             android:layout_width="247.5dp"
             android:layout_height="247.5dp"
             android:layout_gravity="center_horizontal"
-            android:background="@color/black_141A29"
-            android:onClick="onActionTop">
+            android:background="@color/black_141A29">
 
             <TextView
                 style="@style/title_bold"
@@ -63,7 +62,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@color/black_141A29"
-            android:onClick="onActionBottom">
+         >
 
             <TextView
                 style="@style/title_bold"

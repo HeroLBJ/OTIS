@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <com.bocweb.otis.util.ui.TitleView
+        android:id="@+id/tv_title"
+        style="@style/common_title_style"
+        app:title="轿厢老化会带来哪些问题" />
+
+    <View style="@style/line_left_34" />
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="36sp" />
+
+    <com.bocweb.otis.ui.mod.page.TextPickView
+        android:id="@+id/tpView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:gravity="center" />
+
+    <cn.youngkaaa.yviewpager.YViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:orientation="vertical" />
+
+    <com.bocweb.otis.util.ui.ModBottomView
+        android:id="@+id/mbView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="55dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_back_bg_write"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/t_rigth" />
+    </RelativeLayout>
+
+</RelativeLayout>

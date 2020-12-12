@@ -6,7 +6,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.view.children
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.ui.mod.rule.ModRule1Activity
+import com.bocweb.otis.ui.mod.rule.ModRuleActivity
 import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_mod_main.*
 import java.util.*
@@ -17,8 +17,6 @@ class ModMainActivity : BaseActivity() {
     private val random = Random()
 
     override fun initView() {
-        rootView.startPageAnim(this)
-
         for (child in rl_parent.children) {
             val set = AnimatorSet()
             val translation =
@@ -31,11 +29,6 @@ class ModMainActivity : BaseActivity() {
         val anim = ObjectAnimator.ofFloat(tv_title, "alpha", 1f, 1f)
         anim.duration = 6000
         anim.start()
-        anim.doOnEnd {
-//            rootView.startPage(this, ModRule1Activity::class.java
-//            , getScreenWidth()/2, getScreenHeight())
-
-            startPageDownY(ModRule1Activity::class.java)
-         }
+        anim.doOnEnd { startPageDownY(ModRuleActivity::class.java, finish = true) }
     }
 }
