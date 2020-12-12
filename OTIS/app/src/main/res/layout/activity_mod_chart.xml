@@ -30,8 +30,6 @@
     <TextView
         android:id="@+id/tv_back"
         style="@style/title_bold"
-        android:paddingTop="@dimen/dp_10"
-        android:paddingBottom="@dimen/dp_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -39,6 +37,8 @@
         android:layout_marginEnd="15dp"
         android:drawableEnd="@drawable/res_back_right"
         android:drawablePadding="13dp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
         android:text="返回"
         android:textColor="@color/white"
         android:textSize="10sp" />
@@ -51,6 +51,17 @@
         android:layout_marginEnd="15dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
-        app:cardMaxElevation="15dp" />
+        app:cardMaxElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/page_bg"
+            android:layout_height="match_parent">
+
+            <com.bocweb.otis.ui.mod.chart.ChartView
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
