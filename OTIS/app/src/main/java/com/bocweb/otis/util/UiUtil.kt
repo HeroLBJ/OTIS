@@ -23,6 +23,7 @@ import com.bocweb.otis.util.ui.MaxViewPager
 import com.bocweb.otis.util.ui.ScaleTransitionPagerTitleView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.luck.picture.lib.PictureSelector
 import com.luck.picture.lib.entity.LocalMedia
 import com.to.aboomy.banner.Banner

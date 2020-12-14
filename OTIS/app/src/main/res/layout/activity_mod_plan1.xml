@@ -2,28 +2,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/rootView"
     android:layout_height="match_parent"
     android:background="@color/page_bg">
 
     <com.bocweb.otis.util.ui.TitleView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
-        app:title="问题可能存在于" />
+        app:title="奥的斯机电改造解决方案" />
 
     <View style="@style/line_left_34" />
 
-    <TextView
-        style="@style/title_bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="55dp"
+        android:layout_height="32dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="15.5dp"
-        android:drawableEnd="@drawable/res_back_right"
-        android:drawablePadding="13dp"
-        android:gravity="center"
-        android:text="返回"
-        android:textSize="10sp" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_back_bg_write"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/t_rigth" />
+    </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -44,71 +49,15 @@
                 android:layout_marginBottom="20dp"
                 android:lineSpacingExtra="5dp"
                 android:text="奥的斯机电从客户价值最大化的角度出发\n为您量身定制电梯改造解决方案"
-                android:textColor="@color/black_141A29"
+                android:textColor="#666"
                 android:textSize="13sp" />
 
-            <androidx.cardview.widget.CardView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="315.5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp"
-                app:cardMaxElevation="@dimen/dp_10">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/black_141A29">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="205dp"
-                        android:background="@color/white"
-                        android:scaleType="centerCrop" />
-
-                    <TextView
-                        style="@style/title_bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="225dp"
-                        android:text="快速"
-                        android:textColor="@color/text_color_select"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        style="@style/title_bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="225dp"
-                        android:text="快速"
-                        android:textColor="@color/text_color_select"
-                        android:textSize="20sp" />
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="33.5dp"
-                        android:layout_marginBottom="36dp"
-                        android:background="@color/white" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="6dp"
-                        android:background="@drawable/shape_health_banner_line" />
-
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 
 </RelativeLayout>

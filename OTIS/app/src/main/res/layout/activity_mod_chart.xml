@@ -45,23 +45,83 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="482.5dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="97.5dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="87dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:cardMaxElevation="15dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@color/page_bg"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/page_bg">
 
-            <com.bocweb.otis.ui.mod.chart.ChartView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="400dp" />
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="65dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:text="电梯部件的老化速度并不统一,当一些部件已严重老化时,一些部件仍保持着良好的状态"
+                android:textColor="@color/black_141A29" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="159dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_141A29"
+                android:gravity="center"
+                android:text="高价值部件保留的优势"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="159dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            app:cardMaxElevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C59443"
+                android:gravity="center"
+                android:text="电梯经常老化的部位"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -14,11 +14,17 @@
     <View style="@style/line_left_34" />
 
     <ImageView
-        android:layout_width="82.5dp"
-        android:layout_height="27dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mod_rule_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="27dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/res_playing" />
 
     <RelativeLayout
         android:id="@+id/rl_actions"
@@ -37,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_red"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="控制系统"
@@ -59,7 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_red"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="曳引系统"
@@ -78,7 +84,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_green"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="导轨系统"
@@ -97,7 +103,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_red"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="轿厢系统"
@@ -116,7 +122,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_green"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="门厅系统"
@@ -131,6 +137,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp"
+        style="@style/title_bold_1"
         android:background="@drawable/mod_rule_black_circle_20"
         android:elevation="10dp"
         android:gravity="center"
@@ -141,8 +148,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/tv_action"
+        android:drawablePadding="5dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-65dp"
+        android:drawableBottom="@drawable/mod_rule_down"
+        android:layout_marginBottom="-75dp"
         android:text="滑动查看不同部位改造价值"
         android:textColor="#999"
         android:textSize="11sp" />
@@ -152,34 +161,34 @@
         android:layout_height="23.2dp"
         android:layout_marginStart="154.5dp"
         android:layout_marginTop="121.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_red" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="208.5dp"
         android:layout_marginTop="156.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_red" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="206dp"
         android:layout_marginTop="231.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_green" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="185dp"
         android:layout_marginTop="346dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_red" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="464dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_green" />
 
 </RelativeLayout>

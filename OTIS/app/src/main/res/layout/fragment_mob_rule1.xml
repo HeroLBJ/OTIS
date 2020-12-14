@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/page_bg">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mod_rule_bg" />
+
     <com.bocweb.otis.util.ui.TitleView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
@@ -14,11 +20,12 @@
     <View style="@style/line_left_34" />
 
     <ImageView
-        android:layout_width="82.5dp"
-        android:layout_height="27dp"
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="27dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/res_playing" />
 
     <RelativeLayout
         android:id="@+id/rl_actions"
@@ -38,7 +45,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_black"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="控制系统"
@@ -46,8 +53,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="113dp"
             android:id="@+id/cd_label2"
+            android:layout_width="113dp"
             android:layout_height="35.5dp"
             android:layout_marginStart="243.5dp"
             android:layout_marginTop="167.5dp"
@@ -58,7 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_black"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="曳引系统"
@@ -66,10 +73,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cd_label3"
             android:layout_width="113dp"
             android:layout_height="35.5dp"
             android:layout_marginStart="79dp"
-            android:id="@+id/cd_label3"
             android:layout_marginTop="224.5dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="5dp"
@@ -78,7 +85,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_black"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="导轨系统"
@@ -86,9 +93,9 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cd_label4"
             android:layout_width="113dp"
             android:layout_height="35.5dp"
-            android:id="@+id/cd_label4"
             android:layout_marginStart="224.5dp"
             android:layout_marginTop="339.5dp"
             app:cardCornerRadius="4dp"
@@ -98,7 +105,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_black"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="轿厢系统"
@@ -106,9 +113,9 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cd_label5"
             android:layout_width="113dp"
             android:layout_height="35.5dp"
-            android:id="@+id/cd_label5"
             android:layout_marginStart="198dp"
             android:layout_marginTop="470dp"
             app:cardCornerRadius="4dp"
@@ -118,7 +125,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/black_141A29"
+                android:background="@drawable/mod_label_black"
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:text="门厅系统"
@@ -129,6 +136,8 @@
     <TextView
         android:id="@+id/tv_action"
         android:layout_width="222.5dp"
+        style="@style/title_bold_1"
+        android:includeFontPadding="false"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -137,14 +146,17 @@
         android:elevation="10dp"
         android:gravity="center"
         android:text="查看电梯改造价值链分析"
-        android:textSize="13sp" />
+        android:textSize="13sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/tv_action"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-65dp"
+        android:layout_marginBottom="-75dp"
+        android:drawableBottom="@drawable/mod_rule_down"
+        android:drawablePadding="5dp"
         android:text="滑动查看不同部位改造价值"
         android:textColor="#999"
         android:textSize="11sp" />
@@ -154,34 +166,34 @@
         android:layout_height="23.2dp"
         android:layout_marginStart="154.5dp"
         android:layout_marginTop="121.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_black" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="208.5dp"
         android:layout_marginTop="156.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_black" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="206dp"
         android:layout_marginTop="231.5dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_black" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="185dp"
         android:layout_marginTop="346dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_black" />
 
     <ImageView
         android:layout_width="23.2dp"
         android:layout_height="23.2dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="464dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_point_black" />
 
 </RelativeLayout>

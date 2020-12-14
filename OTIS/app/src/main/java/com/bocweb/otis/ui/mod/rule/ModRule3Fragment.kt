@@ -1,29 +1,22 @@
 package com.bocweb.otis.ui.mod.rule
 
-import android.view.View
-import android.widget.Toast
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseFragment
+import com.bocweb.otis.ui.mod.plan.ModPlan1Activity
+import com.bocweb.otis.ui.mod.plan.ModPlan2Activity
 import com.bocweb.otis.util.setClickNoRepeat
+import com.bocweb.otis.util.startPage
 import kotlinx.android.synthetic.main.fragment_mob_rule3.*
 
 class ModRule3Fragment : BaseFragment() {
     override fun getLayoutId() = R.layout.fragment_mob_rule3
 
     override fun initListener() {
-        action_top.setClickNoRepeat {
-            Toast.makeText(requireContext(),"机电改造",Toast.LENGTH_LONG).show()
+        iv_action_top.setClickNoRepeat {
+            it.startPage(requireActivity(), ModPlan1Activity::class.java)
         }
-        action_bottom.setClickNoRepeat {
-            Toast.makeText(requireContext(),"整梯换新",Toast.LENGTH_LONG).show()
+        iv_action_bottom.setClickNoRepeat {
+            it.startPage(requireActivity(), ModPlan2Activity::class.java)
         }
-    }
-
-    fun onActionTop(it: View){
-
-    }
-
-    fun onActionBottom(it: View){
-
     }
 }

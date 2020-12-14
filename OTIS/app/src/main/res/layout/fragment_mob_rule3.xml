@@ -33,48 +33,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tv_title"
-       android:gravity="center"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/action_top"
-            android:layout_width="247.5dp"
-            android:layout_height="247.5dp"
+        <ImageView
+            android:id="@+id/iv_action_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@color/black_141A29">
+            android:background="@drawable/rule3_top" />
 
-            <TextView
-                style="@style/title_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:text="奥的斯机电改造\n解决方案"
-                android:textColor="@color/white"
-                android:textSize="13sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/action_bottom"
-            android:layout_width="247.5dp"
-            android:layout_height="247.5dp"
+        <ImageView
+            android:id="@+id/iv_action_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:background="@color/black_141A29"
-         >
-
-            <TextView
-                style="@style/title_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:text="传统整梯换新面临\n的问题"
-                android:textColor="@color/white"
-                android:textSize="13sp" />
-
-        </RelativeLayout>
+            android:background="@drawable/rule3_bottom" />
 
     </LinearLayout>
 

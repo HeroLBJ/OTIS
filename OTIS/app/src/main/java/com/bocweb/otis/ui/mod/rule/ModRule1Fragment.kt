@@ -15,6 +15,9 @@ class ModRule1Fragment : BaseFragment() {
 
     override fun initListener() {
         tv_action.setClickNoRepeat { it.startPage(requireActivity(), ModChartActivity::class.java) }
+        iv_play.setClickNoRepeat {
+            // 参看视频
+        }
 
         for (index in 0 until rl_actions.childCount) {
             rl_actions[index].setClickNoRepeat {
