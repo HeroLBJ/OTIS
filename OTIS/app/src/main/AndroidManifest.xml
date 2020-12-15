@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.mod.scroll.ModScroll2Activity"></activity>
+        <activity android:name=".ui.mod.scroll.ModScroll2Activity"
+            android:launchMode="singleTop"
+            />
         <activity android:name=".ui.mod.scroll.ModScrollActivity" />
         <activity android:name=".ui.mod.chart.ModChartChildActivity" />
         <activity android:name=".MainActivity">

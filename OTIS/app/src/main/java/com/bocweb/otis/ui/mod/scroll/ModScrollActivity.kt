@@ -5,12 +5,14 @@ import android.widget.LinearLayout
 import androidx.viewpager.widget.ViewPager
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.util.dp2px
-import com.bocweb.otis.util.startPageAnim
+import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_mod_scroll.*
+import kotlinx.android.synthetic.main.activity_mod_scroll.vp_pager
 
 class ModScrollActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_mod_scroll
+
+    private var viewPagerIndex = 0
 
     override fun initView() {
         rootView.startPageAnim(this)
@@ -18,10 +20,39 @@ class ModScrollActivity : BaseActivity() {
 
         setCurrentIndex(0)
         vp_pager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
+
+            override fun onPageScrollStateChanged(state: Int) {
+                if (state == 1) {
+                    viewPagerIndex = vp_pager.currentItem
+                }
+            }
+
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                if (viewPagerIndex == position && position == 3) {
+                    jumpNextPage()
+                }
+            }
+
             override fun onPageSelected(position: Int) {
-                rootView.postDelayed({ setCurrentIndex(position)},300)
+                rootView.postDelayed({ setCurrentIndex(position) }, 300)
             }
         })
+    }
+
+    private var lastClickTime = 0L
+    private fun jumpNextPage() {
+        val currentTime = System.currentTimeMillis()
+        if (lastClickTime != 0L && (currentTime - lastClickTime < 500)) {
+            rootView.startPage(
+                this, ModScroll2Activity::class.java, getScreenWidth(), getScreenHeight() / 2
+            )
+        } else {
+            lastClickTime = currentTime
+        }
     }
 
     private fun setCurrentIndex(index: Int) {
