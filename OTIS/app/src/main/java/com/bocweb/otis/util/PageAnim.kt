@@ -69,7 +69,7 @@ fun View.startPageAnim(activity: Activity) {
         val startRadius = 0f
         val endRadius = getScreenHeight().toFloat()
         val anim = ViewAnimationUtils.createCircularReveal(rootView, x, y, startRadius, endRadius)
-        anim.duration = 500
+        anim.duration = 1000
         anim.interpolator = AccelerateDecelerateInterpolator()
         anim.doOnStart { visibility = View.VISIBLE }
         anim.start()

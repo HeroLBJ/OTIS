@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_bg"
@@ -13,30 +14,43 @@
 
     <View style="@style/line_left_34" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tv_title"
-        android:layout_marginTop="@dimen/dp_10" />
+        android:layout_marginTop="@dimen/dp_10">
 
-    <RelativeLayout
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/shape_yellow_22_5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/title_bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="奥的斯机电改造解决方案"
-            android:textSize="12sp" />
+            <include layout="@layout/include_activity_mod_plan2" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/shape_yellow_22_5dp">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/mod_plan2_left"
+                    android:drawablePadding="10dp"
+                    android:text="奥的斯机电改造解决方案"
+                    android:textSize="12sp" />
 
 
-    </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>
