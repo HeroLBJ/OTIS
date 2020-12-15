@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="310dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="15dp"
@@ -24,7 +24,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/mod_plan2_big1"
+                android:background="@drawable/mod_door_big1"
                 android:scaleType="centerCrop" />
 
             <View
@@ -33,26 +33,58 @@
                 android:layout_margin="6dp"
                 android:background="@drawable/shape_health_banner_line" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="33.5dp"
+                android:layout_marginBottom="39dp"
+                android:background="@drawable/mod_door_label1" />
+
             <TextView
                 style="@style/title_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:drawableStart="@drawable/mod_plan2_1"
-                android:drawablePadding="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="225dp"
                 android:gravity="center"
-                android:text="噪音及粉尘"
+                android:text="快速"
                 android:textColor="@color/text_color_select"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="34dp"
+                    android:text="电梯安装周期最多可缩短"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="34dp"
+                    android:text="60%"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="310dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="15dp"
@@ -69,7 +101,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/mod_plan2_big2"
+                android:background="@drawable/mod_door_big2"
                 android:scaleType="centerCrop" />
 
             <View
@@ -78,26 +110,49 @@
                 android:layout_margin="6dp"
                 android:background="@drawable/shape_health_banner_line" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="33.5dp"
+                android:layout_marginBottom="39dp"
+                android:background="@drawable/mod_door_label2" />
+
             <TextView
                 style="@style/title_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:drawableStart="@drawable/mod_plan2_2"
-                android:drawablePadding="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="220dp"
                 android:gravity="center"
-                android:text="业主出行不便"
+                android:text="便捷"
                 android:textColor="@color/text_color_select"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="保留厅门，避免侯梯厅二次装潢的麻烦\n避免导轨运输产生的磕碰，及装潢损坏"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="310dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="15dp"
@@ -114,7 +169,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/mod_plan2_big3"
+                android:background="@drawable/mod_door_big3"
                 android:scaleType="centerCrop" />
 
             <View
@@ -123,19 +178,120 @@
                 android:layout_margin="6dp"
                 android:background="@drawable/shape_health_banner_line" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="33.5dp"
+                android:layout_marginBottom="39dp"
+                android:background="@drawable/mod_door_label3" />
+
             <TextView
                 style="@style/title_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:drawableStart="@drawable/mod_plan2_3"
-                android:drawablePadding="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="220dp"
                 android:gravity="center"
-                android:text="对原有建筑装潢产生破坏"
+                android:text="环保"
                 android:textColor="@color/text_color_select"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="减少冲击钻开孔带来的噪声、粉尘污染\n减少建筑垃圾的产生"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_black_circle_10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mod_door_big3"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:background="@drawable/shape_health_banner_line" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="33.5dp"
+                android:layout_marginBottom="39dp"
+                android:background="@drawable/mod_door_label3" />
+
+            <TextView
+                style="@style/title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="220dp"
+                android:gravity="center"
+                android:text="环保"
+                android:textColor="@color/text_color_select"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="保留高价值部件，\n费用节省最高可达整梯的"
+                    android:textColor="#666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="18dp"
+                    android:text="50%"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

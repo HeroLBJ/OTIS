@@ -4,22 +4,22 @@ import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
 import com.bocweb.otis.util.finishPage
 import com.bocweb.otis.util.setClickNoRepeat
-import com.bocweb.otis.util.startPage
 import com.bocweb.otis.util.startPageAnim
 import kotlinx.android.synthetic.main.activity_mod_chart.*
-import kotlinx.android.synthetic.main.fragment_mob_rule1.rootView
+import kotlinx.android.synthetic.main.activity_mod_chart.rl_bottom
+import kotlinx.android.synthetic.main.activity_mod_plan2.rootView
 
-class ModChartActivity : BaseActivity() {
-    override fun getLayoutId() = R.layout.activity_mod_chart
+class ModChartChildActivity : BaseActivity() {
+    override fun getLayoutId() = R.layout.activity_mod_chart_child
 
     override fun initView() {
         rootView.startPageAnim(this)
-    }
 
-    override fun initListener() {
-        tv_back.setClickNoRepeat { onBackPressed() }
-        tv_action_left.setClickNoRepeat {
-            it.startPage(this, ModChartChildActivity::class.java)
+        tv_back.setClickNoRepeat {
+            onBackPressed()
+        }
+        rl_bottom.setClickNoRepeat {
+
         }
     }
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <com.bocweb.otis.util.ui.TitleView
+        android:id="@+id/tv_title"
+        style="@style/common_title_style"
+        app:title="保留厅门 / 导轨价值说明" />
+
+    <View style="@style/line_left_34" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="15dp"
+        android:drawableEnd="@drawable/res_back_right"
+        android:drawablePadding="18.5dp"
+        android:text="返回"
+        android:textSize="10sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginStart="42.5dp"
+                android:layout_marginTop="15dp"
+                android:text="奥的斯机电从客户价值最大化的角度出发\n为您量身定制电梯改造解决方案"
+                android:textColor="@color/black_141A29"
+                android:textSize="13sp" />
+
+            <include layout="@layout/include_activity_mod_plan2" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/shape_yellow_22_5dp">
+
+                <TextView
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/mod_plan2_left"
+                    android:drawablePadding="10dp"
+                    android:text="奥的斯机电改造解决方案"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

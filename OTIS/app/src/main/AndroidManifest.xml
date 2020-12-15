@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
+        <activity android:name=".ui.mod.chart.ModChartChildActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +24,13 @@
         </activity>
         <activity android:name=".ui.mod.page.ModPageActivity" />
         <activity android:name=".ui.mod.rule.ModRuleActivity" />
-        <activity android:name=".ui.mod.plan.ModPlan2Activity" >
-
-        </activity>
-        <activity android:name=".ui.mod.plan.ModPlan1Activity" >
-
-        </activity>
+        <activity android:name=".ui.mod.plan.ModPlan2Activity"></activity>
+        <activity android:name=".ui.mod.plan.ModPlan1Activity"></activity>
         <activity android:name=".ui.mod.chart.ModChartActivity" />
         <activity android:name=".ui.mod.ModMainActivity" />
-        <activity android:name=".ui.mod.ModSplashActivity" android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.mod.ModSplashActivity"
+            android:theme="@style/FullScreen" />
         <activity android:name=".ui.aeeb.more.detail.AeebMoreDetailActivity" />
         <activity android:name=".ui.aeeb.more.AeebMoreActivity" />
         <activity android:name=".ui.aeeb.pretty.AeebPrettyActivity" />
