@@ -6,7 +6,7 @@ import com.bocweb.otis.util.finishPage
 import com.bocweb.otis.util.setClickNoRepeat
 import com.bocweb.otis.util.startPageAnim
 import kotlinx.android.synthetic.main.activity_mod_chart.*
-import kotlinx.android.synthetic.main.activity_mod_chart.rl_bottom
+import kotlinx.android.synthetic.main.activity_mod_chart_child.rl_bottom
 import kotlinx.android.synthetic.main.activity_mod_plan2.rootView
 
 class ModChartChildActivity : BaseActivity() {
