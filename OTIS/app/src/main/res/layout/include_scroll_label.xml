@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="279dp"
+    android:layout_height="31.5dp"
+    android:gravity="center">
+
+    <View
+        android:id="@+id/label_bg"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_scroll_label_bg" />
+
+    <LinearLayout
+        android:layout_width="279dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_scroll_label_line"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_label1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="保留厅门系统"
+            android:textColor="#BB9455"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_label2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="保留厅门地坎"
+            android:textColor="@color/black_141A29"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_label3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="保留小门套"
+            android:textColor="@color/black_141A29"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

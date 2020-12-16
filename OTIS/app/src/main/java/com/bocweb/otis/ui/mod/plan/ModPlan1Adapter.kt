@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.bocweb.otis.R
 import com.bocweb.otis.app.data.InfoData
+import com.bocweb.otis.ui.mod.scroll.ModScroll2Activity
 import com.bocweb.otis.ui.mod.scroll.ModScrollActivity
 import com.bocweb.otis.util.dp2px
 import com.bocweb.otis.util.setClickNoRepeat
@@ -34,7 +35,7 @@ class ModPlan1Adapter(private val act: Activity, data: MutableList<InfoData>) :
                 if (adapterPosition == 0) {
                     it.startPage(act, ModScrollActivity::class.java)
                 } else {
-                    it.startPage(act, ModScrollActivity::class.java)
+                    it.startPage(act, ModScroll2Activity::class.java)
                 }
             }
 

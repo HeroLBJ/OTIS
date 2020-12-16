@@ -2,6 +2,7 @@ package com.bocweb.otis.ui.mod.plan
 
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
+import com.bocweb.otis.ui.mod.scroll.ModScroll2Activity
 import com.bocweb.otis.ui.mod.scroll.ModScrollActivity
 import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_mod_plan1.*
@@ -18,7 +19,7 @@ class ModPlan1Activity : BaseActivity() {
             it.startPage(this, ModScrollActivity::class.java)
         }
         iv_action2.setClickNoRepeat {
-            it.startPage(this, ModScrollActivity::class.java)
+            it.startPage(this, ModScroll2Activity::class.java)
         }
     }
 
