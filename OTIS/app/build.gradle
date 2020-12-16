@@ -61,4 +61,5 @@ dependencies {
     implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.2'
     implementation 'jp.wasabeef:recyclerview-animators:4.0.1'
     implementation 'com.github.open-android:ViewPager:0.1.0'
+    implementation 'com.blankj:utilcodex:1.30.5'
 }

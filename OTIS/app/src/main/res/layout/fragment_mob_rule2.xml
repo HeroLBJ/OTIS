@@ -19,13 +19,6 @@
         android:layout_centerInParent="true"
         android:background="@drawable/mod_rule_bg" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/res_playing" />
-
     <RelativeLayout
         android:id="@+id/rl_actions"
         android:layout_width="match_parent"
@@ -190,5 +183,14 @@
         android:layout_marginStart="164dp"
         android:layout_marginTop="464dp"
         android:background="@drawable/mod_point_green" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/tv_title"
+        android:background="@drawable/top_play" />
 
 </RelativeLayout>
