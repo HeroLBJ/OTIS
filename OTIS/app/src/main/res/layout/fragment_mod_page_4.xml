@@ -4,4 +4,56 @@
     android:layout_height="match_parent"
     android:background="@drawable/res_page4_bg">
 
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="191.5dp"
+        android:text="响应速度缓慢" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="298dp"
+        android:text="经常无法使用" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="342dp"
+        android:text="维护费用增加" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="121.5dp"
+        android:layout_marginTop="442dp"
+        android:text="装潢破损陈旧" />
+
+    <ImageView
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="217dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="286dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="380dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="208.5dp"
+        android:layout_marginTop="413.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
 </RelativeLayout>

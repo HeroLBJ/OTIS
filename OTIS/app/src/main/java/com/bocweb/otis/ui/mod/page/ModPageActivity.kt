@@ -21,8 +21,6 @@ class ModPageActivity : BaseActivity() {
         rootView.startPageAnim(this)
         rl_back.setClickNoRepeat { onBackPressed() }
 
-        tv_index.text = "$currentPage"
-
         tpView.setCurrentIndex(currentPage)
 
         view_pager.adapter = ModPageAdapter(supportFragmentManager)

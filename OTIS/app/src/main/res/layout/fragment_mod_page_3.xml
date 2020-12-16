@@ -4,4 +4,43 @@
     android:layout_height="match_parent"
     android:background="@drawable/res_page3_bg">
 
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="229dp"
+        android:text="不易损坏" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="310dp"
+        android:text="使用寿命远高于其他部件" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="364.5dp"
+        android:text="更换导轨费时费力" />
+
+    <ImageView
+        android:layout_marginStart="229dp"
+        android:layout_marginTop="260dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="319.5dp"
+        android:layout_marginTop="310dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="354dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
 </RelativeLayout>

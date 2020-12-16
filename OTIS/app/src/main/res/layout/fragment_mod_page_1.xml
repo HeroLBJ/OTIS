@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/res_page1_bg">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/res_page1_bg"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="76.5dp"
+        android:layout_marginTop="192dp"
+        android:text="无法通过安全验收" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="235.5dp"
+        android:layout_marginTop="192dp"
+        android:text="费电" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="92.5dp"
+        android:layout_marginTop="253dp"
+        android:text="故障频发" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="120.5dp"
+        android:layout_marginTop="314.5dp"
+        android:text="维护费用增加" />
+
+    <ImageView
+        android:layout_marginStart="179.5dp"
+        android:layout_marginTop="224dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="225dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="178.5dp"
+        android:layout_marginTop="262dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="199dp"
+        android:layout_marginTop="288dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
 
 </RelativeLayout>

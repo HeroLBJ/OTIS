@@ -13,15 +13,6 @@
 
     <View style="@style/line_left_34" />
 
-    <TextView
-        android:id="@+id/tv_index"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="36sp" />
-
     <com.bocweb.otis.ui.mod.page.TextPickView
         android:id="@+id/tpView"
         android:layout_width="100dp"

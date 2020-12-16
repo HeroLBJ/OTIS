@@ -4,4 +4,43 @@
     android:layout_height="match_parent"
     android:background="@drawable/res_page5_bg">
 
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="101.5dp"
+        android:layout_marginTop="278dp"
+        android:text="不易损坏" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="124.5dp"
+        android:layout_marginTop="371dp"
+        android:text="更换破坏原有装潢" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="125.5dp"
+        android:layout_marginTop="452dp"
+        android:text="更换产生噪音、粉尘" />
+
+    <ImageView
+        android:layout_marginStart="152.5dp"
+        android:layout_marginTop="308.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="241.5dp"
+        android:layout_marginTop="382.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="212.5dp"
+        android:layout_marginTop="413.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
 </RelativeLayout>

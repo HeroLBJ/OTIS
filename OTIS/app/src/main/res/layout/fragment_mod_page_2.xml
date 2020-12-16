@@ -4,4 +4,56 @@
     android:layout_height="match_parent"
     android:background="@drawable/res_page2_bg">
 
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="214.5dp"
+        android:layout_marginTop="199dp"
+        android:text="噪音" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="173.5dp"
+        android:layout_marginTop="243dp"
+        android:text="运行抖动" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="305dp"
+        android:text="不满足新的安全标准" />
+
+    <TextView
+        style="@style/mod_page_text"
+        android:layout_marginStart="259.5dp"
+        android:layout_marginTop="319dp"
+        android:text="配件停产" />
+
+    <ImageView
+        android:layout_marginStart="263dp"
+        android:layout_marginTop="221dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="259.5dp"
+        android:layout_marginTop="252dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="277.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
+    <ImageView
+        android:layout_marginStart="313.5dp"
+        android:layout_marginTop="290.5dp"
+        android:layout_width="22.5dp"
+        android:layout_height="22.5dp"
+        android:background="@drawable/mod_point_black" />
+
 </RelativeLayout>
