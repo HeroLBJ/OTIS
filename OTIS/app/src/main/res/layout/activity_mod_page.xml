@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     android:background="@color/page_bg">
 
-    <com.bocweb.otis.util.ui.TitleView
+    <cn.youngkaaa.yviewpager.YViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:orientation="vertical" />
+
+    <TextView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
-        app:title="轿厢老化会带来哪些问题" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:drawableStart="@drawable/t_left"
+        android:drawablePadding="10dp"
+        android:text="轿厢老化会带来哪些问题"
+        android:textSize="20sp" />
 
-    <View style="@style/line_left_34" />
+    <View style="@style/line_left_34"
+        android:layout_marginStart="14dp"
+        />
 
     <com.bocweb.otis.ui.mod.page.TextPickView
         android:id="@+id/tpView"
@@ -20,17 +34,29 @@
         android:layout_centerVertical="true"
         android:gravity="center" />
 
-    <cn.youngkaaa.yviewpager.YViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:orientation="vertical" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_action"
+        android:layout_width="222dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22.5dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="@dimen/dp_10">
 
-    <com.bocweb.otis.util.ui.ModBottomView
-        android:id="@+id/mbView"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true" />
+        <TextView
+            style="@style/title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_black_20"
+            android:gravity="center"
+            android:text="查看电梯改造价值链分析"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+    </androidx.cardview.widget.CardView>
 
     <RelativeLayout
         android:id="@+id/rl_back"

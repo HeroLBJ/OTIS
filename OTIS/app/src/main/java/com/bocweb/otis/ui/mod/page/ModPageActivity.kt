@@ -40,11 +40,9 @@ class ModPageActivity : BaseActivity() {
 
         })
 
-        mbView.setOnActionListener(object : ModBottomView.OnActionListener {
-            override fun onActionClick() {
-                mbView.startPage(this@ModPageActivity, ModChartActivity::class.java)
-            }
-        })
+        cv_action.setClickNoRepeat {
+            it.startPage(this@ModPageActivity, ModChartActivity::class.java)
+        }
     }
 
     override fun onBackPressed() {

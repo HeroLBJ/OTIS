@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.bocweb.otis.R
+import com.bocweb.otis.util.dp2px
 
 class TitleView(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
@@ -19,6 +20,7 @@ class TitleView(context: Context, attrs: AttributeSet?) : LinearLayout(context, 
         val titleColor = array.getColor(R.styleable.TitleView_title_color, Color.BLACK)
         tvTitle.text = title ?: ""
         tvTitle.setTextColor(titleColor)
+
         addView(rootView)
         array.recycle()
     }

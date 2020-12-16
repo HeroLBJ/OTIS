@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/ic_baseline_arrow_drop_up_24" />
+            android:background="@drawable/mod_rule_up" />
 
         <TextView
             android:id="@+id/tv_up"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:background="@drawable/ic_baseline_arrow_drop_down_24" />
+            android:background="@drawable/mod_rule_down" />
 
     </LinearLayout>
 
