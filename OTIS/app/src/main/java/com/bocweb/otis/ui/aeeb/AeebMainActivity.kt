@@ -10,6 +10,7 @@ import com.bocweb.otis.ui.aeeb.health.HealthActivity
 import com.bocweb.otis.ui.aeeb.more.AeebMoreActivity
 import com.bocweb.otis.ui.aeeb.pretty.AeebPrettyActivity
 import com.bocweb.otis.ui.aeeb.spare.AeebSpareActivity
+import com.bocweb.otis.ui.aeeb.speed.AeebSpeedActivity
 import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_main_aeeb.*
 import kotlinx.android.synthetic.main.activity_main_aeeb.rootView
@@ -32,6 +33,7 @@ class AeebMainActivity : BaseActivity() {
         tv_action_good.setClickNoRepeat { it.startPage(this, AeebGoodActivity::class.java) }
         tv_action_pretty.setClickNoRepeat { it.startPage(this, AeebPrettyActivity::class.java) }
         tv_action_more.setClickNoRepeat { it.startPage(this, AeebMoreActivity::class.java) }
+        tv_action_speed.setClickNoRepeat { it.startPage(this, AeebSpeedActivity::class.java) }
     }
 
     override fun initData() {
@@ -54,7 +56,7 @@ class AeebMainActivity : BaseActivity() {
             anim.startDelay = item * 200L
             anim.start()
 
-            val anim2 = ObjectAnimator.ofFloat(actionList[item], "rotation", -10f,10f,-10f)
+            val anim2 = ObjectAnimator.ofFloat(actionList[item], "rotation", -10f, 10f, -10f)
             anim2.duration = 1500
             anim2.repeatCount = ObjectAnimator.INFINITE
             anim2.start()
