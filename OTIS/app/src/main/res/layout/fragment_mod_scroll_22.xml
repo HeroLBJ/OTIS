@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_bg">
@@ -129,8 +130,8 @@
                 android:layout_width="0.5dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="18.5dp"
-                android:background="#20000000"
-                android:layout_marginBottom="18.5dp" />
+                android:layout_marginBottom="18.5dp"
+                android:background="#20000000" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -150,23 +151,23 @@
                     android:textSize="16sp" />
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="14dp"
-                    android:layout_height="wrap_content">
+                    android:orientation="horizontal">
 
                     <ImageView
-                        android:background="@drawable/splash_black_circle_3"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:layout_height="wrap_content"/>
+                        android:background="@drawable/splash_black_circle_3" />
 
                     <TextView
                         android:id="@+id/tv_bad1"
-                        android:layout_marginStart="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
                         android:text="需要地质监局确认可以"
                         android:textColor="@color/black_141A29"
                         android:textSize="11sp" />

@@ -20,4 +20,5 @@
     <color name="ver_line_color">#B0B2B0</color>
     <color name="mod_splash_bg">#22336E</color>
     <color name="info_label_color">#BB9455</color>
+    <color name="transparent">@android:color/transparent</color>
 </resources>

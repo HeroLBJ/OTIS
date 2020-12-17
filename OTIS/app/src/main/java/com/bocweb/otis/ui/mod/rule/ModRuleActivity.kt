@@ -14,8 +14,11 @@ class ModRuleActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.activity_mod_rule
 
     private val dialog by lazy { InputInfoDialog(this) }
+    private val position by lazy { intent.getIntExtra("position",-1) }
+
 
     override fun initView() {
+
         viewpager.adapter = ModRuleAdapter(supportFragmentManager)
 
         iv_submit_info.setClickNoRepeat {
@@ -34,6 +37,13 @@ class ModRuleActivity : BaseActivity() {
         })
 
         dialog.setOnDismissListener { showImg() }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(position != -1){
+            viewpager.currentItem = position
+        }
     }
 
     private fun showImg() {

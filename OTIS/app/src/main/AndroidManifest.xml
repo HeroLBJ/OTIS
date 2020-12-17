@@ -14,9 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AEEB">
-        <activity android:name=".ui.mod.scroll.ModScroll2Activity"
-            android:launchMode="singleTop"
-            />
+        <activity android:name=".ui.aeeb.pretty.list.AeebPrettyListActivity"></activity>
+        <activity android:name=".ui.aeeb.speed.AeebSpeedActivity" />
+        <activity
+            android:name=".ui.mod.scroll.ModScroll2Activity"
+            android:launchMode="singleTop" />
         <activity android:name=".ui.mod.scroll.ModScrollActivity" />
         <activity android:name=".ui.mod.chart.ModChartChildActivity" />
         <activity android:name=".MainActivity">
@@ -27,7 +29,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.mod.page.ModPageActivity" />
-        <activity android:name=".ui.mod.rule.ModRuleActivity" />
+        <activity
+            android:name=".ui.mod.rule.ModRuleActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".ui.mod.plan.ModPlan2Activity" />
         <activity android:name=".ui.mod.plan.ModPlan1Activity" />
         <activity android:name=".ui.mod.chart.ModChartActivity" />

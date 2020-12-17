@@ -3,6 +3,7 @@ package com.bocweb.otis.util
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Point
 import android.graphics.Rect
 import android.text.Html
@@ -63,7 +64,9 @@ fun MagicIndicator.bindViewPager(
     viewPager: ViewPager,
     mDataList: List<String> = arrayListOf(),
     mStringList: List<String> = arrayListOf(),
-    action: (index: Int) -> Unit = {}
+    action: (index: Int) -> Unit = {},
+    selectTextSize: Float = 17f,
+    indicatorColor: Int = R.color.black_141A29
 ) {
     val commonNavigator = CommonNavigator(context)
     commonNavigator.adapter = object : CommonNavigatorAdapter() {
@@ -82,7 +85,7 @@ fun MagicIndicator.bindViewPager(
                 } else {
                     Html.fromHtml(mStringList[index])
                 }
-                textSize = 17f
+                textSize = selectTextSize
                 normalColor = ContextCompat.getColor(context, R.color.black_141A29)
                 selectedColor = ContextCompat.getColor(context, R.color.black_141A29)
                 setOnClickListener {
@@ -93,19 +96,7 @@ fun MagicIndicator.bindViewPager(
         }
 
         override fun getIndicator(context: Context): IPagerIndicator {
-            return LinePagerIndicator(context).apply {
-                mode = LinePagerIndicator.MODE_EXACTLY
-                //线条的宽高度
-                lineHeight = UIUtil.dip2px(context, 1.5).toFloat()
-                lineWidth = UIUtil.dip2px(context, 30.0).toFloat()
-                //线条的圆角
-                roundRadius = UIUtil.dip2px(context, 6.0).toFloat()
-                startInterpolator = AccelerateInterpolator()
-                endInterpolator = DecelerateInterpolator(2.0f)
-                //线条的颜色
-                setColors(ContextCompat.getColor(context, R.color.black_141A29))
-                yOffset = 10.dp2px().toFloat()
-            }
+            return context.indicatorLinePager(indicatorColor)
         }
     }
     this.navigator = commonNavigator
@@ -128,6 +119,22 @@ fun MagicIndicator.bindViewPager(
             action.invoke(position)
         }
     })
+}
+
+fun Context.indicatorLinePager(indicatorColor:Int): IPagerIndicator {
+    return LinePagerIndicator(this).apply {
+        mode = LinePagerIndicator.MODE_EXACTLY
+        //线条的宽高度
+        lineHeight = UIUtil.dip2px(context, 1.5).toFloat()
+        lineWidth = UIUtil.dip2px(context, 30.0).toFloat()
+        //线条的圆角
+        roundRadius = UIUtil.dip2px(context, 6.0).toFloat()
+        startInterpolator = AccelerateInterpolator()
+        endInterpolator = DecelerateInterpolator(2.0f)
+        //线条的颜色
+        setColors(ContextCompat.getColor(context, indicatorColor))
+        yOffset = 10.dp2px().toFloat()
+    }
 }
 
 fun Banner.setNoMorePages(items: List<Any>) {

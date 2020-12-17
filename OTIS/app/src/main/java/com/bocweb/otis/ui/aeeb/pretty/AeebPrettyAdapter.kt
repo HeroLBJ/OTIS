@@ -5,6 +5,7 @@ import android.view.View
 import com.bocweb.otis.R
 import com.bocweb.otis.ui.aeeb.common.AeebInfo
 import com.bocweb.otis.ui.aeeb.pretty.detail.AeebPrettyDetailActivity
+import com.bocweb.otis.ui.aeeb.pretty.list.AeebPrettyListActivity
 import com.bocweb.otis.util.setClickNoRepeat
 import com.bocweb.otis.util.startPage
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -21,7 +22,7 @@ class AeebPrettyAdapter(private val act:Activity,data: MutableList<AeebInfo>) :
 
             val rootView = getView<View>(R.id.rootView)
             rootView.setClickNoRepeat {
-                rootView.startPage(act, AeebPrettyDetailActivity::class.java)
+                rootView.startPage(act, AeebPrettyListActivity::class.java)
             }
         }
     }

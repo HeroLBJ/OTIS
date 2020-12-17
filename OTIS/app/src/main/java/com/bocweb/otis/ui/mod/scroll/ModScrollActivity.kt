@@ -3,6 +3,7 @@ package com.bocweb.otis.ui.mod.scroll
 import android.view.View
 import android.widget.LinearLayout
 import androidx.viewpager.widget.ViewPager
+import com.blankj.utilcode.util.ToastUtils
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
 import com.bocweb.otis.util.*
@@ -39,8 +40,11 @@ class ModScrollActivity : BaseActivity() {
 
             override fun onPageSelected(position: Int) {
                 rootView.postDelayed({ setCurrentIndex(position) }, 300)
+                iv_back.visibility = if (position == 0) View.GONE else View.VISIBLE
             }
         })
+
+        iv_back.setClickNoRepeat { onBackPressed() }
     }
 
     private var lastClickTime = 0L
@@ -71,5 +75,9 @@ class ModScrollActivity : BaseActivity() {
         pointV.setBackgroundResource(R.drawable.shape_yellow_rect_3)
         pointV.layoutParams = params
         ll_index.addView(pointV, index)
+    }
+
+    override fun onBackPressed() {
+        rootView.finishPage(this)
     }
 }

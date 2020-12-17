@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:id="@+id/rootView"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_bg">
 
@@ -19,18 +19,21 @@
         android:text="返回"
         android:textSize="10sp" />
 
-    <net.lucode.hackware.magicindicator.MagicIndicator
-        android:id="@+id/indicator"
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/title_bold"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@id/tv_back"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20.5dp"
+        android:layout_marginTop="63dp"
+        android:text="玻璃外观"
+        android:textSize="20sp" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/vp_pager"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/indicator" />
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/dp_10" />
 
 </RelativeLayout>

@@ -5,9 +5,9 @@
 
     <ImageView
         android:id="@+id/iv_bg"
-        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:id="@+id/ll_info"
@@ -18,9 +18,9 @@
         android:orientation="vertical">
 
         <ImageView
-            android:background="@drawable/paln_left1"
             android:layout_width="42dp"
-            android:layout_height="46dp"/>
+            android:layout_height="46dp"
+            android:background="@drawable/paln_left1" />
 
         <TextView
             style="@style/title_bold"

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.bocweb.otis.R
+import com.bocweb.otis.util.setClickNoRepeat
 
 class ModScrollAdapter(private val context: Context) : PagerAdapter() {
     override fun getCount() = 4

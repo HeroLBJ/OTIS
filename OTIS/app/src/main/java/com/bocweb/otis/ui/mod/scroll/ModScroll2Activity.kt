@@ -6,6 +6,8 @@ import cn.youngkaaa.yviewpager.YViewPager
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
 import com.bocweb.otis.util.dp2px
+import com.bocweb.otis.util.finishPage
+import com.bocweb.otis.util.setClickNoRepeat
 import com.bocweb.otis.util.startPageAnim
 import kotlinx.android.synthetic.main.activity_mod_scroll2.*
 import kotlinx.android.synthetic.main.activity_mod_scroll2.rootView
@@ -22,8 +24,14 @@ class ModScroll2Activity : BaseActivity() {
         vp_pager.addOnPageChangeListener(object : YViewPager.SimpleOnPageChangeListener() {
             override fun onPageSelected(position: Int) {
                 rootView.postDelayed({ setCurrentIndex(position) }, 300)
+                tv_back.visibility = if (position == 0) View.GONE else View.VISIBLE
             }
         })
+        tv_back.setClickNoRepeat { onBackPressed() }
+    }
+
+    override fun onBackPressed() {
+        rootView.finishPage(this)
     }
 
     private fun setCurrentIndex(index: Int) {

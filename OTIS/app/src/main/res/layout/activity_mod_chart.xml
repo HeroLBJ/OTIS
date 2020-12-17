@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_bg">
 
-    <View
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="205dp"
-        android:background="@color/black_141A29" />
+        android:background="@drawable/mod_line_top_bg" />
 
-    <com.bocweb.otis.util.ui.TitleView
+    <TextView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
-        app:title="电梯改造价值链分析"
-        app:title_color="@color/white" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/title_left_write"
+        android:drawablePadding="10dp"
+        android:text="电梯改造价值链分析"
+        android:textSize="20sp" />
 
     <TextView
         style="@style/title_bold"
@@ -27,21 +32,16 @@
         android:textColor="#999"
         android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tv_back"
+    <ImageView
+        android:id="@+id/iv_back"
         style="@style/title_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
-        android:drawableEnd="@drawable/res_back_right"
-        android:drawablePadding="13dp"
-        android:paddingTop="@dimen/dp_10"
-        android:paddingBottom="@dimen/dp_10"
-        android:text="返回"
-        android:textColor="@color/white"
-        android:textSize="10sp" />
+        android:background="@drawable/res_back_write_right"
+        android:textColor="@color/white" />
 
     <ImageView
         android:layout_above="@id/rl_bottom"
@@ -95,6 +95,7 @@
 
         <TextView
             android:layout_width="159dp"
+            android:visibility="gone"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/mod_rule_yellow_circle_20"

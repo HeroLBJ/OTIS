@@ -19,4 +19,17 @@
         android:layout_marginBottom="30dp"
         android:orientation="horizontal" />
 
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21.5dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        android:drawableStart="@drawable/res_back_left"
+        android:drawablePadding="18dp"
+        android:text="返回"
+        android:textColor="@color/black_141A29"
+        android:textSize="10sp" />
+
 </RelativeLayout>
