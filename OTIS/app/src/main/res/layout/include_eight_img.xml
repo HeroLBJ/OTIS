@@ -4,19 +4,20 @@
     android:layout_height="wrap_content">
 
     <View
-        android:background="@drawable/aeeb_eight_bg"
         android:layout_width="wrap_content"
+        android:layout_height="413dp"
         android:layout_marginTop="190dp"
-        android:layout_height="413dp"/>
+        android:background="@drawable/aeeb_eight_bg" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
-            android:layout_marginTop="26dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
             android:orientation="horizontal">
 
             <View
@@ -25,8 +26,10 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:alpha="0.1"
                 android:background="@drawable/aeeb_speed_big1" />
 
             <View
@@ -35,6 +38,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight2"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big2" />
@@ -45,6 +50,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight3"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big3" />
@@ -56,9 +63,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <View
@@ -67,6 +74,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight4"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big4" />
@@ -77,6 +86,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight5"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big5" />
@@ -87,6 +98,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight6"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big6" />
@@ -98,9 +111,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <View
@@ -109,6 +122,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight7"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big7" />
@@ -119,6 +134,8 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/eight8"
+                android:alpha="0.1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/aeeb_speed_big8" />
@@ -131,8 +148,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:background="@drawable/aeeb_speed_big1" />
+                android:background="@drawable/aeeb_speed_big1"
+                android:visibility="invisible" />
 
             <View
                 android:layout_width="0dp"
