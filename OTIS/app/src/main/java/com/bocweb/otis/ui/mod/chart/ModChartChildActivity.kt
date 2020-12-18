@@ -2,7 +2,7 @@ package com.bocweb.otis.ui.mod.chart
 
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.ui.mod.scroll.ModScrollActivity
+import com.bocweb.otis.ui.mod.plan.ModPlan1Activity
 import com.bocweb.otis.util.finishPage
 import com.bocweb.otis.util.setClickNoRepeat
 import com.bocweb.otis.util.startPage
@@ -20,7 +20,7 @@ class ModChartChildActivity : BaseActivity() {
             onBackPressed()
         }
         rl_bottom.setClickNoRepeat {
-            rootView.startPage(this,ModScrollActivity::class.java)
+            rootView.startPage(this, ModPlan1Activity::class.java)
         }
     }
 

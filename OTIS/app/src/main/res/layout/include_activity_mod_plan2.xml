@@ -253,7 +253,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="33.5dp"
                 android:layout_marginBottom="39dp"
-                android:background="@drawable/mod_door_label3" />
+                android:background="@drawable/mod_door_label4" />
 
             <TextView
                 style="@style/title_bold"
@@ -262,7 +262,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="220dp"
                 android:gravity="center"
-                android:text="环保"
+                android:text="经济"
                 android:textColor="@color/text_color_select"
                 android:textSize="20sp" />
 

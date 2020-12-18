@@ -34,6 +34,8 @@ class AeebMainActivity : BaseActivity() {
         tv_action_pretty.setClickNoRepeat { it.startPage(this, AeebPrettyActivity::class.java) }
         tv_action_more.setClickNoRepeat { it.startPage(this, AeebMoreActivity::class.java) }
         tv_action_speed.setClickNoRepeat { it.startPage(this, AeebSpeedActivity::class.java) }
+
+        tv_help.setClickNoRepeat { onBackPressed() }
     }
 
     override fun initData() {
@@ -64,6 +66,8 @@ class AeebMainActivity : BaseActivity() {
     }
 
     private fun animCenter() {
+        ActivityUtil.finish()
+
         val set = AnimatorSet()
         val anim1 = ObjectAnimator.ofFloat(iv_center, "alpha", 1f, 0.5f, 1f)
         anim1.repeatCount = ObjectAnimator.INFINITE

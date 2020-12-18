@@ -62,4 +62,5 @@ dependencies {
     implementation 'jp.wasabeef:recyclerview-animators:4.0.1'
     implementation 'com.github.open-android:ViewPager:0.1.0'
     implementation 'com.blankj:utilcodex:1.30.5'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.5.0'
 }

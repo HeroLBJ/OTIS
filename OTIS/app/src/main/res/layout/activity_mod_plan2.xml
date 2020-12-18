@@ -10,7 +10,7 @@
     <com.bocweb.otis.util.ui.TitleView
         android:id="@+id/tv_title"
         style="@style/common_title_style"
-        app:title="奥的斯机电改造解决方案" />
+        app:title="保留厅门 / 导轨价值说明" />
 
     <View style="@style/line_left_34" />
 
@@ -24,6 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:text="奥的斯机电从客户价值最大化的角度出发\n为您量身定制电梯改造解决方案"
+                android:textColor="@color/black_141A29"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:textSize="13sp" />
 
             <include layout="@layout/include_activity_mod_plan2" />
 

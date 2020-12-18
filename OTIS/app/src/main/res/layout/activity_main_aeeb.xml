@@ -110,19 +110,6 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_help"
-        style="@style/title_bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="点击查看秘籍"
-        android:textColor="#141A29"
-        android:textSize="13sp"
-        app:drawableBottomCompat="@drawable/home_text_down_line" />
-
     <ImageView
         android:id="@+id/iv_bg"
         android:layout_width="match_parent"
@@ -142,5 +129,18 @@
         android:text="A  E  E  B"
         android:textColor="@color/splash_letter_color"
         android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_help"
+        style="@style/title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="点击查看秘籍"
+        android:textColor="#141A29"
+        android:textSize="13sp"
+        app:drawableBottomCompat="@drawable/home_text_down_line" />
 
 </FrameLayout>

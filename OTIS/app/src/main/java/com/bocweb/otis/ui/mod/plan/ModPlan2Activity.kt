@@ -16,7 +16,7 @@ class ModPlan2Activity : BaseActivity() {
         rootView.startPageAnim(this)
 
         rl_bottom.setClickNoRepeat {
-            rootView.startPage(this, ModChartActivity::class.java)
+            rootView.startPage(this, ModPlan1Activity::class.java)
         }
     }
 

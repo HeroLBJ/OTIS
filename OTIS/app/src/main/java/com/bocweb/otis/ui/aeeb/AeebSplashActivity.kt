@@ -8,10 +8,7 @@ import android.view.animation.DecelerateInterpolator
 import androidx.core.animation.doOnEnd
 import com.bocweb.otis.R
 import com.bocweb.otis.app.base.BaseActivity
-import com.bocweb.otis.util.dp2px
-import com.bocweb.otis.util.getScreenHeight
-import com.bocweb.otis.util.getScreenWidth
-import com.bocweb.otis.util.setClickNoRepeat
+import com.bocweb.otis.util.*
 import kotlinx.android.synthetic.main.activity_splash_aeeb.*
 
 class AeebSplashActivity : BaseActivity() {
@@ -22,23 +19,9 @@ class AeebSplashActivity : BaseActivity() {
     private val duration2 = 500L // 缩小aeeb
     private val duration3 = 500L // 移动aeeb到顶部,展示电梯
     private val duration4 = 1200L // 显示logo
-    private var isAction = false
 
     override fun initData() {
         startAnim1()
-
-        iv_action.setClickNoRepeat {
-            if (!isAction) return@setClickNoRepeat
-            val intent = Intent(this, AeebMainActivity::class.java)
-            val transitionActivityOptions =
-                ActivityOptions.makeSceneTransitionAnimation(
-                    this,
-                    iv_action,
-                    "action"
-                )
-            startActivity(intent, transitionActivityOptions.toBundle())
-            finish()
-        }
     }
 
     private fun startAnim1() {
@@ -188,6 +171,18 @@ class AeebSplashActivity : BaseActivity() {
         set.play(anim1).with(anim2).with(anim3)
         set.duration = duration4
         set.start()
-        set.doOnEnd { isAction = true }
+        set.doOnEnd { actionNextPage() }
+    }
+
+    private fun actionNextPage() {
+        val intent = Intent(this, AeebMainActivity::class.java)
+        val transitionActivityOptions =
+            ActivityOptions.makeSceneTransitionAnimation(
+                this,
+                iv_action,
+                "action"
+            )
+        startActivity(intent, transitionActivityOptions.toBundle())
+        ActivityUtil.addFinish(this)
     }
 }
